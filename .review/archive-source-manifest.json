@@ -1,0 +1,19 @@
+{
+  "src\\config.py": "343b161e140aa0f09f99f9fb705affa26bad48766b616ee62792546f3e706bea",
+  "src\\__init__.py": "ffb3a541d6d590ae2369dd022dda48d20ad3fb31006feaa01661f9985cc35e20",
+  "src\\core\\archive_paths.py": "f6ae427179ecf8ac5d9f8e88cc5aa9abe8a278cf0f2cc674abeb531ab7a02abf",
+  "src\\core\\context.py": "df376e55de7db7eece3cd986911031444727d1016c5a5d5baa94d1da5b108a86",
+  "src\\core\\duplicates.py": "7e94b99a37adfdfe52c931058caff5e5fbbaa3a5337bf820fd27f07a6de53dba",
+  "src\\core\\pipeline.py": "8beebcfe2fec7abff8e9894c2aecc82a21cfa1559187d4824bb7783f565db09b",
+  "src\\core\\sorter.py": "3879067c1141310735ec4b4269ccb85a78f6b854f3cf1122497d5514966f9d89",
+  "src\\core\\unpacker.py": "551df39b264d2dce4f0a6ab9ca5af1f8dadfb662e9629600f25508336d40c346",
+  "src\\core\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src\\gui\\app.py": "ccb02cd33ab84102d4dff3412062e9f9a70f0cffb0e5ec1ce9b3b634247dd6b9",
+  "src\\gui\\duplicates.py": "1d84b52e4a9b9adfe5d3202358cec78f89d0f07603dcc0cb4ce3c1e2c76db85a",
+  "src\\gui\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src\\utils\\file_ops.py": "4b72d51e47afcb6d5e1195a5d2895d8b3394454cd5559db7ab83b0cb96a1f781",
+  "src\\utils\\journal.py": "b42813d8ed62d3d8c2600085dca95e6bce20741d3d7213c1de35291b92373e4e",
+  "src\\utils\\metadata.py": "f2c6e2f37f0ae5f8e288f2548f2716c547c8dc22e7ccdc0fd721f85802207b78",
+  "src\\utils\\reporting.py": "ab2db11449bed020b038ed187279be132b10dbff2f0aa10ce38be915189dc5dc",
+  "src\\utils\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

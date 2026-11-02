@@ -1,0 +1,37 @@
+[
+  {
+    "key": "mama",
+    "source": "screenshots_for_projects/Screenshot 2026-11-02 at 18-36-57 Продукты у Валентины — с. Иртышск.png",
+    "publishedCopy": "assets/projects/mama-owner.png",
+    "sha256": "19f9c858c791e263d9b2153fbbb9fab02133168e4ae98767b68d7cf1c402ae5d",
+    "unaltered": true
+  },
+  {
+    "key": "nfc",
+    "source": "screenshots_for_projects/Screenshot 2026-11-02 at 18-36-47 Смарт-карточки для сбора отзывов и подписок в одно касание.png",
+    "publishedCopy": "assets/projects/nfc-owner.png",
+    "sha256": "6c3e848c830d48959d31951077e6dd8c07eb3765eb369ef66a9860e3263bba93",
+    "unaltered": true
+  },
+  {
+    "key": "deport",
+    "source": "screenshots_for_projects/Screenshot 2026-11-02 at 18-44-43 Депортация народов в Казахстан.png",
+    "publishedCopy": "assets/projects/deport-owner.png",
+    "sha256": "9dfb37078498e63c273769c24ac0f6cf3d930875069228112d731be4897c4965",
+    "unaltered": true
+  },
+  {
+    "key": "sklad",
+    "source": "screenshots_for_projects/Screenshot 2026-11-02 at 18-37-16 Склад 14 — строительный магазин в Павлодаре.png",
+    "publishedCopy": "assets/projects/sklad-owner.png",
+    "sha256": "776f716694b056bc0da3197a960bfad4c966ea1d7652ec62ba8d6ec4380a6cb2",
+    "unaltered": true
+  },
+  {
+    "key": "china",
+    "source": "screenshots_for_projects/Screenshot 2026-11-02 at 18-39-03 Поднебесная 5000 лет величия Интерактивная хроника цивилизации.png",
+    "publishedCopy": "assets/projects/china-owner.png",
+    "sha256": "81abc4f36962c30715814ef6e0531b8fce1a3220640cf0576cee14c5b0c6b433",
+    "unaltered": true
+  }
+]

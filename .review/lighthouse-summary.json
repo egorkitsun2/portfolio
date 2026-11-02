@@ -1,0 +1,112 @@
+[
+  {
+    "name": "home-mobile",
+    "url": "/",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1050.7439999999997,
+    "CLS": 0,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "home-desktop",
+    "url": "/",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 282.41,
+    "CLS": 0,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "contact-mobile",
+    "url": "/?contact=1",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1050.5640000000003,
+    "CLS": 0,
+    "TBT": 25,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-ros",
+    "url": "/projects/ros.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1110,
+    "CLS": 0,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-mama",
+    "url": "/projects/mama.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1051.6649,
+    "CLS": 0.007581715139881184,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-archive",
+    "url": "/projects/archive.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1050.809,
+    "CLS": 0,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-china",
+    "url": "/projects/china.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1110,
+    "CLS": 0.009583287936809817,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-sklad",
+    "url": "/projects/sklad.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1050.569,
+    "CLS": 0.01207009050269085,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-deport",
+    "url": "/projects/deport.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1110,
+    "CLS": 0.009583287936809817,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  },
+  {
+    "name": "case-nfc",
+    "url": "/projects/nfc.html",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1050.672,
+    "CLS": 0.01207009050269085,
+    "TBT": 0,
+    "failedAccessibility": [],
+    "warnings": []
+  }
+]

@@ -1,0 +1,808 @@
+--- original/index.html
++++ current/index.html
+@@ -74,17 +74,17 @@
+ .project-quick-done{color:var(--text);background:transparent;border:1px solid #58645c}
+ @media(max-width:760px){.project-info{align-items:flex-start;flex-direction:column}.open-project{align-self:flex-end}.project-quick-actions>*{flex:1 1 100%;text-align:center}}
+ </style>
+-<link href="contact.css" rel="stylesheet"/><script defer="True" src="contact.js"></script></head>
+-<body>
++<link href="contact.css" rel="stylesheet"/><link href="review.css" rel="stylesheet"/><script defer src="project-data.js"></script><script defer src="project-media.js"></script><script defer src="contact.js"></script><script defer src="portfolio.js"></script></head>
++<body><a class="skip-link" href="#main">Перейти к содержимому</a>
+ <header class="top">
+ <div class="shell top-inner">
+-<a aria-label="К началу страницы" class="brand" href="#home"><span class="brand-icon">E.</span><span class="brand-word">PORTFOLIO / 26</span></a>
++<a aria-label="E. PORTFOLIO / 26 — к началу страницы" class="brand" href="#home"><span class="brand-icon">E.</span><span class="brand-word">PORTFOLIO / 26</span></a>
+ <nav aria-label="Главное меню" class="nav" id="nav"><a class="active" href="#home">Главная</a><a href="#services">Что я делаю</a><a href="#works">Примеры работ</a><a href="#about">Обо мне</a><a data-contact="" href="#contact">Контакты</a></nav>
+ <a class="nav-cta" data-contact="" href="#contact">Связаться →</a>
+ <button aria-controls="nav" aria-expanded="false" aria-label="Открыть меню" class="menu-btn" id="menu">☰</button>
+ </div>
+ </header>
+-<main>
++<main id="main" tabindex="-1"><noscript><p class="shell">Для быстрого просмотра и контактов включите JavaScript. Подробные кейсы доступны по ссылкам проектов.</p></noscript>
+ <section class="hero shell grid-bg" id="home">
+ <div class="hero-main">
+ <div class="eyebrow">Разработка для бизнеса и частных задач</div>
+@@ -98,39 +98,16 @@
+ <a class="service-card reveal" data-contact="" href="#contact"><span class="service-index">03 / АВТОМАТИЗАЦИЯ</span><strong>Нужно упростить работу</strong><p>Убрать повторяющиеся действия, обработать файлы или связать процессы.</p><span class="service-link">Обсудить задачу ↗</span></a>
+ </div></div></section>
+ <section class="strip"><div class="shell strip-row"><span class="strip-label">Направления работы</span><div class="strip-types"><span>01 / WEB</span><span>02 / DESKTOP</span><span>03 / AUTOMATION</span><span>04 / INFRASTRUCTURE</span></div></div></section>
+-<section class="section" id="works"><div class="shell work-layout"><div class="work-rail"><p class="kicker">01 / Избранные работы</p><h2 class="section-title">Примеры моих работ</h2><p class="section-copy">Семь проектов — от инструментов для Windows до торговых систем и интерактивных веб-приложений.</p><div class="rail-note">Содержание карточек основано на репозиториях. Графика ниже — концептуальные иллюстрации, не снимки интерфейсов.</div></div><div class="work-stack">
+-<article class="project-card reveal"><div class="project-visual ros"><div class="ros-window"><div class="window-bar"><span>ROS / LIVE OCR → SPEECH</span><span class="window-dots"><i></i><i></i><i></i></span></div><div class="ocr-focus">«Найденные субтитры превращаются в речь»</div><div aria-hidden="true" class="waves"><i style="--h:14px;--d:0s"></i><i style="--h:31px;--d:.1s"></i><i style="--h:18px;--d:.2s"></i><i style="--h:36px;--d:.3s"></i><i style="--h:23px;--d:.4s"></i><i style="--h:28px;--d:.5s"></i><i style="--h:12px;--d:.6s"></i><i style="--h:34px;--d:.7s"></i><i style="--h:19px;--d:.8s"></i><i style="--h:28px;--d:.9s"></i><i style="--h:15px;--d:1s"></i></div></div><span class="visual-note">01 — CONCEPT VIEW / NOT ACTUAL UI</span></div><div class="project-info"><div><p class="project-num">01 / WINDOWS SOFTWARE</p><h3 class="project-name">Read On Speak</h3><p class="project-sub">Распознавание субтитров с экрана и озвучивание в реальном времени.</p><div class="tags"><span class="tag">Python</span><span class="tag">WinSDK OCR</span><span class="tag">TTS</span></div></div><a aria-label="Кратко о проекте Read On Speak" class="open-project" data-project="ros" href="projects/ros.html">О проекте ↗</a></div></article>
+-<article class="project-card reveal"><div class="project-visual shop"><div class="shop-window"><div class="shop-top"><span>ПРОДУКТЫ У ВАЛЕНТИНЫ</span><span>Управление магазином</span></div><div class="shop-body"><div><div class="shop-stats"><div class="shop-stat"><small>Каталог</small><b>Товары</b></div><div class="shop-stat"><small>Учёт</small><b>Остатки</b></div><div class="shop-stat"><small>Продажи</small><b>Касса</b></div></div><div class="shop-list"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div><div class="shop-side"><div><small style="font-size:10px;color:#68796e">POS / Inventory</small><strong style="display:block;margin-top:12px">Единая<br/>система</strong></div><span class="mini">FLASK / SQLITE</span></div></div></div><span class="visual-note">02 — CONCEPT VIEW / NOT ACTUAL UI</span></div><div class="project-info"><div><p class="project-num">02 / BUSINESS SYSTEM</p><h3 class="project-name">Продукты у Валентины</h3><p class="project-sub">Онлайн-витрина и локальная система управления магазином. Техническое название — mama-shop.</p><div class="tags"><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">PWA</span></div></div><a aria-label="Кратко о проекте Продукты у Валентины" class="open-project" data-project="mama" href="projects/mama.html">О проекте ↗</a></div></article>
+-<article class="project-card reveal"><div class="project-visual archive"><div class="terminal"><div class="terminal-header"><i></i><i></i><i></i><b>archivarius / session</b></div><div><span class="green">$</span> analyze ./incoming</div><div class="quiet">Scanning archive contents...</div><div><span class="blue">├──</span> photos/2026/11 <span class="ok">✓</span></div><div><span class="blue">├──</span> documents/pdf <span class="ok">✓</span></div><div><span class="blue">└──</span> audio/sorted <span class="ok">✓</span></div><div class="green">● Dry run enabled</div></div><span class="visual-note">03 — CONCEPT VIEW / NOT ACTUAL UI</span></div><div class="project-info"><div><p class="project-num">03 / DESKTOP AUTOMATION</p><h3 class="project-name">Архивариус</h3><p class="project-sub">Распаковка архивов и умная сортировка файлов с пробным запуском и откатом.</p><div class="tags"><span class="tag">Python</span><span class="tag">CustomTkinter</span><span class="tag">File I/O</span></div></div><a aria-label="Кратко о проекте Архивариус" class="open-project" data-project="archive" href="projects/archive.html">О проекте ↗</a></div></article>
+-<article class="project-card reveal"><div class="project-visual china"><div class="china-panel"><div class="china-text"><span>ИНТЕРАКТИВНАЯ ХРОНИКА</span>Поднебесная<br/>5000 лет величия</div><div class="china-years"><span>ЦИНЬ</span><span>ХАНЬ</span><span>ТАН</span><span>МИН</span><span>ЦИН</span></div></div><span class="visual-note">04 — CONCEPT VIEW / NOT ACTUAL UI</span></div><div class="project-info"><div><p class="project-num">04 / INTERACTIVE WEBSITE</p><h3 class="project-name">China History</h3><p class="project-sub">Визуальная история цивилизации с интерактивной хронологией, звуком и квизами.</p><div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Canvas</span></div></div><a aria-label="Кратко о проекте Поднебесная — China History" class="open-project" data-project="china" href="projects/china.html">О проекте ↗</a></div></article>
++<section class="section" id="works"><div class="shell work-layout"><div class="work-rail"><p class="kicker">01 / Избранные работы</p><h2 class="section-title">Примеры моих работ</h2><p class="section-copy">Семь проектов — от инструментов для Windows до торговых систем и интерактивных веб-приложений.</p><div class="rail-note">Пять веб-проектов доступны по ссылке «Посмотреть сайт». Здесь показаны реальные скриншоты; иллюстрация Read On Speak отдельно помечена как концепт.</div></div><div class="work-stack">
++<article class="project-card reveal"><div class="project-visual ros"><div class="ros-window"><div class="window-bar"><span>ROS / LIVE OCR → SPEECH</span><span class="window-dots"><i></i><i></i><i></i></span></div><div class="ocr-focus">«Найденные субтитры превращаются в речь»</div><div aria-hidden="true" class="waves"><i style="--h:14px;--d:0s"></i><i style="--h:31px;--d:.1s"></i><i style="--h:18px;--d:.2s"></i><i style="--h:36px;--d:.3s"></i><i style="--h:23px;--d:.4s"></i><i style="--h:28px;--d:.5s"></i><i style="--h:12px;--d:.6s"></i><i style="--h:34px;--d:.7s"></i><i style="--h:19px;--d:.8s"></i><i style="--h:28px;--d:.9s"></i><i style="--h:15px;--d:1s"></i></div></div><span class="visual-note">01 — КОНЦЕПТ · НЕ СКРИНШОТ</span></div><div class="project-info"><div><p class="project-num">01 / WINDOWS SOFTWARE</p><h3 class="project-name">Read On Speak</h3><p class="project-sub">Распознавание субтитров с экрана и озвучивание в реальном времени.</p><div class="tags"><span class="tag">Python</span><span class="tag">WinSDK OCR</span><span class="tag">TTS</span></div></div><a aria-label="Кратко о проекте Read On Speak" class="open-project" id="project-ros" data-project="ros" href="projects/ros.html">О проекте ↗</a></div></article>
++<article class="project-card reveal"><div class="project-visual shop has-screenshot"><img class="project-screenshot" src="assets/projects/mama-owner.png" alt="Оригинальный скриншот покупательской витрины Продукты у Валентины" width="1857" height="968" loading="lazy" decoding="async"/></div><div class="project-info"><div><p class="project-num">02 / BUSINESS SYSTEM</p><h3 class="project-name">Продукты у Валентины</h3><p class="project-sub">Онлайн-витрина и локальная система управления магазином. Техническое название — mama-shop.</p><div class="tags"><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">PWA</span></div></div><div class="project-actions"><a aria-label="Кратко о проекте Продукты у Валентины" class="open-project" id="project-mama" data-project="mama" href="projects/mama.html">О проекте ↗</a><span data-live-project="mama"></span></div></div></article>
++<article class="project-card reveal"><div class="project-visual archive has-screenshot"><img class="project-screenshot" src="assets/projects/archive-sort.jpg" alt="Настоящий стартовый экран Архивариуса с пустыми настройками" width="880" height="780" loading="lazy" decoding="async"/></div><div class="project-info"><div><p class="project-num">03 / DESKTOP AUTOMATION</p><h3 class="project-name">Архивариус</h3><p class="project-sub">Распаковка архивов и умная сортировка файлов с пробным запуском и откатом.</p><div class="tags"><span class="tag">Python</span><span class="tag">CustomTkinter</span><span class="tag">File I/O</span></div></div><a aria-label="Кратко о проекте Архивариус" class="open-project" id="project-archive" data-project="archive" href="projects/archive.html">О проекте ↗</a></div></article>
++<article class="project-card reveal"><div class="project-visual china has-screenshot"><img class="project-screenshot" src="assets/projects/china-owner.png" alt="Оригинальный скриншот работающего China History" width="1857" height="968" loading="lazy" decoding="async"/></div><div class="project-info"><div><p class="project-num">04 / INTERACTIVE WEBSITE</p><h3 class="project-name">China History</h3><p class="project-sub">Визуальная история цивилизации с интерактивной хронологией, звуком и квизами.</p><div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Canvas</span></div></div><div class="project-actions"><a aria-label="Кратко о проекте Поднебесная — China History" class="open-project" id="project-china" data-project="china" href="projects/china.html">О проекте ↗</a><span data-live-project="china"></span></div></div></article>
+ </div></div></section>
+-<section class="other"><div class="shell"><div class="other-header"><div><p class="kicker">02 / Ещё проекты</p><h3>Другие работы</h3></div><span class="section-aside">05 — 07</span></div><a aria-label="Подробнее о проекте «Склад 14»" class="other-row reveal" data-project="sklad" href="projects/sklad.html"><span class="n">05</span><span class="name">Склад 14</span><span class="kind">RETAIL SYSTEM</span><span class="arr">↗</span></a><a aria-label="Подробнее о проекте «Депортация народов в Казахстан»" class="other-row reveal" data-project="deport" href="projects/deport.html"><span class="n">06</span><span class="name">Депортация народов в Казахстан</span><span class="kind">EDUCATION / WEB</span><span class="arr">↗</span></a><a aria-label="Подробнее о проекте «TAPCARD / NFC»" class="other-row reveal" data-project="nfc" href="projects/nfc.html"><span class="n">07</span><span class="name">TAPCARD / NFC</span><span class="kind">LANDING PAGE</span><span class="arr">↗</span></a></div></section>
+-<section class="section about" id="about"><div class="shell about-content"><div class="reveal"><p class="kicker">03 / Подход</p><h2 class="section-title">Меньше сложности.<br/>Больше пользы.</h2><p class="section-copy">Меня интересуют не технологии ради технологий, а работающие решения с понятной логикой и разумной стоимостью поддержки.</p></div><div class="reveal"><p class="about-description">Работаю на стыке <strong>разработки, проектирования и автоматизации</strong>. Собираю интерфейсы, прикладное ПО и системы, которые можно запускать и обслуживать.</p><p class="about-small">В проектах уделяю внимание архитектуре, контролю изменений, совместимости и тестированию. Использую инструменты ИИ-разработки как часть рабочего процесса, проверяя результат и принимая технические решения.</p><div class="stack-categories"><div><h4>Веб</h4><p>HTML, CSS, JavaScript, Flask, PWA</p></div><div><h4>Программы</h4><p>Python, GUI, OCR, TTS, обработка файлов</p></div><div><h4>Данные</h4><p>SQLite, JSON, экспорт и синхронизация</p></div><div><h4>Инфраструктура</h4><p>Ubuntu, Git, SSH, Docker, автоматизация</p></div></div></div></div></section>
+-<section class="contact" id="contact"><div class="shell"><p class="kicker">04 / Контакт</p><div class="contact-wrap"><h2>Нужен сайт или программа?<br/><span>Давай обсудим.</span></h2><a class="contact-link" data-contact="" href="#contact">Выбрать способ связи ↗</a></div><p style="color:var(--sub);max-width:590px;font-size:13px;line-height:1.75;margin:35px 0 90px">Напиши, что хочешь сделать, даже если пока не знаешь технических деталей. Выбери удобный мессенджер — подробности обсудим там. В прототипе контакты пока не заполнены.</p><footer class="foot"><span>© 2026 / PORTFOLIO CONCEPT</span><span>DESIGN × ENGINEERING</span><a href="#home">Наверх ↑</a></footer></div></section>
++<section class="other"><div class="shell"><div class="other-header"><div><p class="kicker">02 / Ещё проекты</p><h2>Другие работы</h2></div><span class="section-aside">05 — 07</span></div><a aria-label="Подробнее о проекте «Склад 14»" class="other-row reveal" id="project-sklad" data-project="sklad" href="projects/sklad.html"><span class="n">05</span><span class="name">Склад 14</span><span class="kind">RETAIL SYSTEM</span><span class="arr">↗</span></a><a aria-label="Подробнее о проекте «Депортация народов в Казахстан»" class="other-row reveal" id="project-deport" data-project="deport" href="projects/deport.html"><span class="n">06</span><span class="name">Депортация народов в Казахстан</span><span class="kind">EDUCATION / WEB</span><span class="arr">↗</span></a><a aria-label="Подробнее о проекте «TAPCARD / NFC»" class="other-row reveal" id="project-nfc" data-project="nfc" href="projects/nfc.html"><span class="n">07</span><span class="name">TAPCARD / NFC</span><span class="kind">LANDING PAGE</span><span class="arr">↗</span></a></div></section>
++<section class="section about" id="about"><div class="shell about-content"><div class="reveal"><p class="kicker">03 / Подход</p><h2 class="section-title">Меньше сложности.<br/>Больше пользы.</h2><p class="section-copy">Меня интересуют не технологии ради технологий, а работающие решения с понятной логикой и разумной стоимостью поддержки.</p></div><div class="reveal"><p class="about-description">Работаю на стыке <strong>разработки, проектирования и автоматизации</strong>. Собираю интерфейсы, прикладное ПО и системы, которые можно запускать и обслуживать.</p><p class="about-small">В проектах уделяю внимание архитектуре, контролю изменений, совместимости и тестированию. Использую инструменты ИИ-разработки как часть рабочего процесса, проверяя результат и принимая технические решения.</p><div class="stack-categories"><div><h3>Веб</h3><p>HTML, CSS, JavaScript, Flask, PWA</p></div><div><h3>Программы</h3><p>Python, GUI, OCR, TTS, обработка файлов</p></div><div><h3>Данные</h3><p>SQLite, JSON, экспорт и синхронизация</p></div><div><h3>Инфраструктура</h3><p>Ubuntu, Git, SSH, Docker, автоматизация</p></div></div></div></div></section>
++<section class="contact" id="contact"><div class="shell"><p class="kicker">04 / Контакт</p><div class="contact-wrap"><h2>Нужен сайт или программа?<br/><span>Давай обсудим.</span></h2><a class="contact-link" data-contact="" href="#contact">Выбрать способ связи ↗</a></div><p style="color:var(--sub);max-width:590px;font-size:13px;line-height:1.75;margin:35px 0 90px">Напиши, что хочешь сделать, даже если пока не знаешь технических деталей. Выбери удобный мессенджер — подробности обсудим там. Контакты ожидают подтверждения владельцем.</p><footer class="foot"><span>© 2026 / PORTFOLIO</span><span>DESIGN × ENGINEERING</span><a href="#home">Наверх ↑</a></footer></div></section>
+ </main>
+-<dialog aria-labelledby="project-quick-title" class="project-quick-dialog" id="project-quick-dialog"><div class="project-quick-inner"><div class="project-quick-top"><span class="kicker" id="project-quick-type">ПРОЕКТ</span><button aria-label="Закрыть подробности" class="project-quick-close" type="button">×</button></div><h2 id="project-quick-title"></h2><p class="project-quick-summary" id="project-quick-summary"></p><p class="modal-label">Что реализовано</p><ul class="project-quick-list" id="project-quick-features"></ul><div class="project-quick-actions"><a href="#" id="project-quick-detail">Подробный кейс ↗</a><button class="project-quick-done" type="button">Вернуться к работам</button></div></div></dialog><script>const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+-menu.addEventListener('click',()=>{const show=nav.classList.toggle('show');menu.setAttribute('aria-expanded',String(show))});
+-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('show');menu.setAttribute('aria-expanded','false')}));
+-if('IntersectionObserver' in window){const reveal=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');reveal.unobserve(e.target)}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));const spy=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-30% 0px -60% 0px'});document.querySelectorAll('main > section[id]').forEach(el=>spy.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'))}
+-
+-// Project cards open short summaries. Full case pages are optional, not a required navigation step.
+-const quickProjects={"ros":{"type":"WINDOWS / OCR / TTS","name":"Read On Speak","summary":"Приложение для считывания субтитров из заданной области экрана и преобразования их в речь.","features":["Захват изображения и Windows OCR","Несколько речевых движков, включая локальные варианты","Отдельные этапы генерации и воспроизведения аудио","Графический интерфейс, горячие клавиши и диагностические инструменты"],"note":"В README описаны показатели производительности и сборка приложения; результаты бенчмарков пока не подтверждались независимым запуском.","url":"https://github.com/egorkitsun2/ROS","details":"projects/ros.html"},"mama":{"type":"RETAIL / FLASK / SQLITE","name":"Продукты у Валентины","summary":"Один продукт с техническим названием mama-shop: покупательская витрина и локальные инструменты магазина.","features":["Каталог товаров с фотографиями и корзиной","Складской учёт, касса и мобильный сканер","SQLite, экспорт каталога и PWA","Автоматизированные тесты и сценарии развёртывания"],"note":"Репозиторий приватный. README указывает на необходимость отдельной приёмки на реальном оборудовании.","url":"https://github.com/egorkitsun2/mama-shop","details":"projects/mama.html"},"archive":{"type":"PYTHON / AUTOMATION","name":"Архивариус","summary":"Настольная программа для распаковки архивов и автоматической классификации файлов.","features":["Поддержка ZIP и работа с 7z/RAR через 7-Zip","Сортировка медиа, документов и аудио","Пробный режим без изменения файлов","Журнал перемещений, откат и карантин проблемных архивов"],"note":"Пробный режим не просматривает содержимое архивов заранее; итоговая сортировка требует отдельной проверки на реальных данных.","url":"https://github.com/egorkitsun2/Project_Programm-sort","details":"projects/archive.html"},"china":{"type":"WEB / INTERACTIVE STORY","name":"Поднебесная — China History","summary":"Интерактивный образовательный сайт о династиях и культурном наследии Китая.","features":["Хронология пяти династий","Иллюстрации, модальные галереи и адаптивная навигация","Анимации Canvas и звуковое оформление","Исторический квиз с результатами"],"note":"Статический веб-проект. Перед публикацией портфолио потребуются реальные скриншоты и проверка прав на медиа.","url":"https://github.com/egorkitsun2/China-history","details":"projects/china.html"},"sklad":{"type":"RETAIL / LOCAL APP","name":"Склад 14","summary":"Онлайн-каталог и локальная система для магазина строительных материалов.","features":["Каталог с поиском, категориями, ценами и корзиной","Интерфейсы для кассы и складского учёта","Сканер штрихкодов и экран покупателя","SQLite, Flask и PWA-ресурсы"],"note":"В текущей версии README предупреждает об отсутствии полноценной защиты служебных маршрутов. Публично демонстрировать следует только изолированную витрину.","url":"https://github.com/egorkitsun2/Sklad-14","details":"projects/sklad.html"},"deport":{"type":"EDUCATION / INTERACTIVE WEB","name":"Депортация народов в Казахстан","summary":"Образовательный сайт об истории депортаций народов в Казахстан в XX веке.","features":["Хронология исторических событий и материалы по народам","Интерактивная карта и документы","Тесты разной сложности и отслеживание прогресса","Достижения и геймификация в браузере"],"note":"Прогресс хранится локально в браузере. Клиентский вход не является полноценной серверной авторизацией.","url":"https://github.com/egorkitsun2/kazakhstan-deportation-archive","details":"projects/deport.html"},"nfc":{"type":"WEB / BUSINESS LANDING","name":"TAPCARD / NFC","summary":"Одностраничный сайт для представления NFC-карточек с переходом к заказу через WhatsApp.","features":["Выбор варианта: 2ГИС или Instagram","Визуальная анимация бесконтактного касания","Каталог дизайнов, тарифы, блок вопросов и ответов","Подготовка сообщения заказа в WhatsApp"],"note":"В README используется название TAPCARD, тогда как раннее описание упоминало APCARD. Финальный бренд требует подтверждения. Сайт не записывает NFC-метки.","url":"https://github.com/egorkitsun2/NFC","details":"projects/nfc.html"}};
+-const qdialog=document.getElementById('project-quick-dialog');
+-const qclose=qdialog.querySelector('.project-quick-close');
+-const closeQuick=()=>qdialog.close();
+-document.querySelectorAll('[data-project]').forEach(a=>a.addEventListener('click',e=>{
+-  const p=quickProjects[a.dataset.project]; if(!p)return; e.preventDefault();
+-  document.getElementById('project-quick-type').textContent=p.type;
+-  document.getElementById('project-quick-title').textContent=p.name;
+-  document.getElementById('project-quick-summary').textContent=p.summary;
+-  document.getElementById('project-quick-features').replaceChildren(...p.features.map(s=>{const li=document.createElement('li');li.textContent=s;return li}));
+-  document.getElementById('project-quick-detail').href=p.details;
+-  qdialog.showModal();document.body.classList.add('modal-open');qclose.focus();
+-}));
+-qclose.addEventListener('click',closeQuick);
+-qdialog.querySelector('.project-quick-done').addEventListener('click',closeQuick);
+-qdialog.addEventListener('close',()=>document.body.classList.remove('modal-open'));
+-qdialog.addEventListener('click',e=>{if(e.target===qdialog)closeQuick()});
+-</script>
++<dialog aria-labelledby="project-quick-title" class="project-quick-dialog" id="project-quick-dialog"><div class="project-quick-inner"><div class="project-quick-top"><span class="kicker" id="project-quick-type">ПРОЕКТ</span><button aria-label="Закрыть подробности" class="project-quick-close" type="button">×</button></div><h2 id="project-quick-title"></h2><p class="project-quick-summary" id="project-quick-summary"></p><div class="project-quick-live" id="project-quick-live"></div><p class="modal-label">Что реализовано</p><ul class="project-quick-list" id="project-quick-features"></ul><p class="project-quick-note" id="project-quick-note"></p><div id="project-quick-media"></div><div class="project-quick-actions"><a href="projects/ros.html" id="project-quick-detail">Подробный кейс ↗</a><button class="project-quick-done" type="button">Вернуться к работам</button></div></div></dialog>
+ <a class="mobile-contact" data-contact="" href="#contact">Написать по поводу проекта ↗</a></body>
+ </html>
+--- original/contact.js
++++ current/contact.js
+@@ -1,37 +1,109 @@
+-/* Fill these values only when the owner confirms public contact URLs. */
++/* Public contacts are enabled only after the owner supplies verified URLs. */
+ const CONTACT_LINKS = {
+-  whatsapp: "",  // e.g. https://wa.me/77000000000
+-  telegram: "",  // e.g. https://t.me/username
+-  instagram: "", // e.g. https://instagram.com/username
++  whatsapp: "",
++  telegram: "",
++  instagram: "",
+   github: "https://github.com/egorkitsun2"
+ };
+ (() => {
+-  const safeUrl = v => { try { const u = new URL(v); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } };
++  const registered = new Map();
++  let closing = false;
++  const syncLock = () => document.body.classList.toggle('modal-open', !!document.querySelector('dialog[open]'));
++  function show(dialog, trigger, project = null, restore = false) {
++    for (const other of registered.keys()) if (other !== dialog && other.open) other.close();
++    if (trigger) dialog._returnFocus = trigger;
++    if (!restore) history.pushState({...history.state, portfolioModal: {id: dialog.id, project}}, '');
++    if (!dialog.open) dialog.showModal();
++    dialog.scrollTop = 0;
++    syncLock();
++    dialog.querySelector('button')?.focus({preventScroll: true});
++  }
++  function close(dialog) {
++    if (closing || !dialog.open) return;
++    if (history.state?.portfolioModal?.id === dialog.id) {
++      closing = true;
++      history.back();
++    } else dialog.close();
++  }
++  function register(dialog) {
++    registered.set(dialog, true);
++    let backdropStart = false;
++    const outside = e => {
++      const r = dialog.getBoundingClientRect();
++      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
++    };
++    dialog.addEventListener('pointerdown', e => { backdropStart = e.target === dialog && outside(e); });
++    dialog.addEventListener('click', e => { if (backdropStart && e.target === dialog && outside(e)) close(dialog); backdropStart = false; });
++    dialog.addEventListener('cancel', e => { e.preventDefault(); close(dialog); });
++    dialog.addEventListener('keydown', e => {
++      if (e.key !== 'Tab') return;
++      const items = [...dialog.querySelectorAll('a[href],button:not([disabled]),video[controls],[tabindex="0"]')].filter(el => el.getClientRects().length);
++      const first = items[0], last = items.at(-1);
++      if (!first) {e.preventDefault(); dialog.focus(); return;}
++      if (e.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {e.preventDefault();last.focus();}
++      else if (!e.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {e.preventDefault();first.focus();}
++    });
++    dialog.addEventListener('close', () => {
++      dialog.querySelectorAll('video').forEach(v => v.pause());
++      syncLock();
++      if (!document.querySelector('dialog[open]') && dialog._returnFocus?.isConnected) {
++        const target = dialog._returnFocus.getClientRects().length ? dialog._returnFocus : document.getElementById('menu');
++        target?.focus({preventScroll:true});
++      }
++    });
++  }
++  window.addEventListener('popstate', () => {
++    closing = false;
++    const state = history.state?.portfolioModal;
++    for (const dialog of registered.keys()) if (dialog.id !== state?.id && dialog.open) dialog.close();
++    if (state) {
++      const dialog = document.getElementById(state.id);
++      if (dialog && registered.has(dialog)) {
++        if (state.project) document.dispatchEvent(new CustomEvent('portfolio:restore-project', {detail:state.project}));
++        show(dialog, null, state.project, true);
++      }
++    }
++    syncLock();
++  });
++  window.PortfolioUI = {show, close, register};
++  const safeUrl = value => {
++    try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password ? url.href : ''; }
++    catch { return ''; }
++  };
+   const labels = [
+-    {key:'whatsapp', label:'WhatsApp', icon:'◉', note:'Перейти в чат', primary:true},
+-    {key:'telegram', label:'Telegram', icon:'➤', note:'Написать сообщение'},
+-    {key:'instagram', label:'Instagram', icon:'◎', note:'Перейти в профиль'},
+-    {key:'github', label:'GitHub', icon:'⌘', note:'Посмотреть профиль разработчика'}
++    {key:'whatsapp',label:'WhatsApp',icon:'◉',note:'Перейти в чат',primary:true},
++    {key:'telegram',label:'Telegram',icon:'➤',note:'Написать сообщение'},
++    {key:'instagram',label:'Instagram',icon:'◎',note:'Перейти в профиль'},
++    {key:'github',label:'GitHub',icon:'⌘',note:'Посмотреть профиль разработчика'}
+   ];
+-  const dlg = document.createElement('dialog'); dlg.id='contact-dialog';dlg.className='contact-dialog';dlg.setAttribute('aria-labelledby','contact-dialog-title');
+-  dlg.innerHTML=`<div class="contact-inner"><div class="contact-top"><span>Давай обсудим твой проект</span><button class="contact-close" type="button" aria-label="Закрыть окно" data-dismiss-contact>×</button></div><h2 id="contact-dialog-title">Где тебе удобнее?</h2><p class="contact-desc">Выбери удобный способ связи.</p><div class="contact-channel-list"></div><p class="contact-help"></p></div>`;
+-  document.body.append(dlg);
+-  const list=dlg.querySelector('.contact-channel-list');
+-  let count=0;
+-  for(const x of labels){
+-    const url=safeUrl(CONTACT_LINKS[x.key]);
+-    const a=document.createElement('a');
+-    a.className='contact-channel '+(x.primary?'primary ':'')+(url?'is-active':'is-unavailable');
+-    a.innerHTML=`<span class="chan-icon" aria-hidden="true">${x.icon}</span><span class="channel-text">${x.label}<small>${url?x.note:'Пока не настроено'}</small></span><span class="chan-arrow" aria-hidden="true">${url?'↗':'—'}</span>`;
+-    if(url){a.href=url;a.target='_blank';a.rel='noopener noreferrer';count++} else {a.setAttribute('aria-disabled','true');a.tabIndex=-1;a.addEventListener('click',e=>e.preventDefault())}
+-    list.append(a);
++  const dialog = document.createElement('dialog');
++  dialog.id = 'contact-dialog';
++  dialog.className = 'contact-dialog';
++  dialog.setAttribute('aria-labelledby','contact-dialog-title');
++  dialog.innerHTML = `<div class="contact-inner"><div class="contact-top"><span>Обсудим твой проект</span><button class="contact-close" type="button" aria-label="Закрыть контакты">×</button></div><h2 id="contact-dialog-title">Где тебе удобнее?</h2><p class="contact-desc">Доступные способы связи.</p><div class="contact-channel-list"></div><p class="contact-help"></p></div>`;
++  document.body.append(dialog);
++  register(dialog);
++  const list = dialog.querySelector('.contact-channel-list');
++  let active = 0;
++  for (const item of labels) {
++    const url = safeUrl(CONTACT_LINKS[item.key]);
++    const channel = document.createElement(url ? 'a' : 'div');
++    channel.className = 'contact-channel ' + (item.primary ? 'primary ' : '') + (url ? 'is-active' : 'is-unavailable');
++    channel.innerHTML = `<span class="chan-icon" aria-hidden="true">${item.icon}</span><span class="channel-text">${item.label}<small>${url ? item.note + ' · новая вкладка' : 'Контакт пока не предоставлен'}</small></span><span class="chan-arrow" aria-hidden="true">${url ? '↗' : '—'}</span>`;
++    if (url) {channel.href=url; channel.target='_blank'; channel.rel='noopener noreferrer'; active++;}
++    list.append(channel);
+   }
+-  dlg.querySelector('.contact-help').textContent=count<4?'Это демонстрация: прямые ссылки на мессенджеры пока не заполнены. Перед публикацией добавим реальные контакты.':'';
+-  const closeBtn=dlg.querySelector('[data-dismiss-contact]');
+-  function openContact(e){if(e){e.preventDefault()} if(!dlg.open){dlg.showModal();document.body.classList.add('modal-open');closeBtn.focus()}}
+-  document.querySelectorAll('[data-contact]').forEach(a=>a.addEventListener('click',openContact));
+-  closeBtn.addEventListener('click',()=>dlg.close());
+-  dlg.addEventListener('close',()=>document.body.classList.remove('modal-open'));
+-  dlg.addEventListener('click', e=> {if(e.target===dlg) dlg.close()});
+-  if(new URLSearchParams(window.location.search).has('contact')) openContact();
++  dialog.querySelector('.contact-help').textContent = active ? 'Ссылки откроются в новой вкладке.' : 'Контакты будут доступны после подтверждения владельцем.';
++  dialog.querySelector('button').addEventListener('click', () => close(dialog));
++  document.querySelectorAll('[data-contact]').forEach(link => {
++    link.setAttribute('aria-haspopup','dialog');
++    link.setAttribute('aria-controls',dialog.id);
++    link.addEventListener('click', e => {
++      if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
++      e.preventDefault();
++      show(dialog, link);
++    });
++  });
++  if (history.state?.portfolioModal?.id === dialog.id) show(dialog, null, null, true);
++  else if (new URLSearchParams(location.search).has('contact')) show(dialog, null);
+ })();
+--- original/README.md
++++ current/README.md
+@@ -1,20 +1,54 @@
+-# Portfolio UX Prototype v0.3
++# Portfolio v0.3 — release candidate
+ 
+-Одностраничная главная страница, контактное окно и быстрые превью всех семи проектов.
++Существующее тёмное одностраничное портфолио. Контакты и краткие сведения о проектах открываются в нативных модальных окнах. Семь отдельных страниц содержат технические кейсы.
+ 
+-## Что изменилось с v0.2
++Локальная сборка не требует npm, сторонних пакетов и этапа компиляции.
+ 
+-- Контакт доступен из шапки, услуг, первого экрана, секции контактов и каждой страницы проекта через одно и то же модальное окно, **без перехода** на отдельную страницу.
+-- Карточки проектов открывают быстрое превью поверх сайта; отдельные case pages доступны только по кнопке «Подробный кейс».
+-- Удалена `contact.html`; больше нет необходимости ходить на отдельную страницу ради мессенджеров.
+-- Прототип поддерживает Esc, закрытие по фону, возврат фокуса браузером (native `<dialog>`), `prefers-reduced-motion` и мобильную версию.
++## Ручная приёмка
+ 
+-## Запуск
++Из корня проекта:
+ 
+-Открой `index.html` в браузере, желательно через локальный HTTP-сервер (`python -m http.server 8000`). Сайт не требует сборки и зависимостей.
++```powershell
++python scripts/build.py
++python -m http.server 8000 --bind 127.0.0.1 --directory release/portfolio-v0.3-rc1
++```
+ 
+-## Перед публикацией
++Откройте http://127.0.0.1:8000. Сервер доступен только на этом компьютере. Остановка — Ctrl+C.
+ 
+-В `contact.js` впиши подтверждённые публичные URL WhatsApp, Telegram и Instagram в `CONTACT_LINKS`. Сейчас они **специально выключены**, потому что ссылки не были предоставлены. GitHub доступен, но это не равно прямому способу заказать работу.
++Готовая папка: `release/portfolio-v0.3-rc1`. Архив с теми же файлами: `release/portfolio-v0.3-rc1.zip`. Сборка содержит только выбранные файлы сайта. Исходные скриншоты владельца, отчёты, резервная копия, инструменты проверки и исходники других проектов в неё не входят.
+ 
+-Репозитории проектов приватные; не обещай публичный просмотр исходников. Изображения и визуализации в проектных карточках являются концептами, а не скриншотами программ. Для публичного портфолио добавь реальные изображения и проверь безопасность материалов.
++## Проверки и материалы
++
++Результаты и ограничения: [RELEASE_REPORT.md](RELEASE_REPORT.md).
++Материалы от владельца: [OWNER_MATERIALS.md](OWNER_MATERIALS.md).
++
++- `project-data.js` — сведения о проектах, проверенные публичные URL, скриншоты и необязательное видео.
++- `project-media.js` — галереи и ссылки на опубликованные проекты.
++- `contact.js` — подтверждённые контакты и общая работа модальных окон.
++- `portfolio.js` — меню, прокрутка, анимации и быстрые просмотры.
++- `review.css` — доступность и адаптивные доработки исходного оформления.
++- `projects/*.html` — технические кейсы.
++- `assets/projects/` — реальные изображения интерфейсов.
++
++Прямые контакты WhatsApp, Telegram и Instagram оставлены пустыми. Публичный GitHub проверен. Не подставляйте контакты магазинов вместо личных контактов владельца портфолио.
++
++## Подключение видеодемонстрации
++
++После предоставления реального ролика положите его в `assets/projects/` и задайте `video` нужного проекта:
++
++```javascript
++video: {
++  src: "assets/projects/имя-реального-файла.mp4",
++  poster: "assets/projects/имя-реального-скриншота.png",
++  captions: "assets/projects/имя-субтитров.vtt",
++  description: "Текстовое описание показанного сценария."
++}
++```
++
++Пример показывает структуру данных и не создаёт ссылок в сайте. Укажите только существующие файлы; `poster` и `captions` необязательны. Видео использует стандартные элементы управления, не запускается автоматически, не загружается заранее и останавливается при закрытии модального окна. После добавления ролика необходимо проверить воспроизведение, звук и субтитры.
++
++## Откат и границы
++
++Git в исходной папке отсутствовал. Исходное состояние сохранено в `.review/original-v0.3.zip`; контрольные суммы — в `.review/original-manifest.json`.
++
++Ничего не опубликовано. Репозитории представленных проектов и настройки хостинга не изменялись. Публикация требует отдельного решения владельца.
+--- original/OWNER_MATERIALS.md
++++ current/OWNER_MATERIALS.md
+@@ -0,0 +1,11 @@
++# Что ещё требуется от владельца
++
++1. Подтверждённые личные URL WhatsApp, Telegram и Instagram для заказов разработки. Сейчас доступен только проверенный GitHub.
++2. Скриншот настоящего Read On Speak с тестовым текстом, без личных окон, имён, путей и уведомлений. Его иллюстрация на главной пока явно обозначена как концепт.
++3. При желании — видеодемонстрации Read On Speak и Архивариуса в MP4/WebM, с текстовым описанием и субтитрами для речи. Для Архивариуса уже добавлен настоящий снимок пустого стартового окна; обработка файлов для него не запускалась.
++4. Подтверждение права использовать исторические иллюстрации, фотографии товаров и бренды в публичном портфолио.
++5. Подтверждение финального названия TAPCARD / NFC и редактура технических описаний проектов перед публикацией.
++
++Пять публичных адресов и пять оригинальных веб-скриншотов получены 02.11.2026 и подключены. Повторно предоставлять их не требуется.
++
++Ручная приёмка: откройте главную на телефоне и компьютере, проверьте тексты, пять кнопок «Посмотреть сайт», контакты, быстрые просмотры и технические кейсы. После решения по материалам и приёмки можно отдельно согласовать публикацию.
+--- original/portfolio.js
++++ current/portfolio.js
+@@ -0,0 +1,76 @@
++(() => {
++  const menu = document.getElementById('menu');
++  const nav = document.getElementById('nav');
++  const setMenu = open => {
++    nav.classList.toggle('show', open);
++    menu.setAttribute('aria-expanded', String(open));
++    menu.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
++    if (open) nav.querySelector('a').focus();
++  };
++  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
++  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
++  document.addEventListener('keydown', e => {
++    if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {setMenu(false); menu.focus();}
++  });
++  document.addEventListener('click', e => {if (!e.target.closest('.top')) setMenu(false);});
++  nav.addEventListener('focusout', () => requestAnimationFrame(() => {
++    if (!nav.contains(document.activeElement) && document.activeElement !== menu) setMenu(false);
++  }));
++  matchMedia('(min-width:761px)').addEventListener('change', () => setMenu(false));
++  const motion = matchMedia('(prefers-reduced-motion: reduce)');
++  const revealElements = [...document.querySelectorAll('.reveal')];
++  if ('IntersectionObserver' in window && !motion.matches) {
++    const observer = new IntersectionObserver(entries => {
++      entries.forEach(entry => {if (entry.isIntersecting) {entry.target.classList.add('visible'); observer.unobserve(entry.target);}});
++    }, {threshold:.08});
++    revealElements.forEach(el => {el.classList.add('will-reveal'); observer.observe(el);});
++    document.addEventListener('focusin', e => e.target.closest('.reveal')?.classList.add('visible'));
++    motion.addEventListener('change', e => {if (e.matches) {observer.disconnect(); revealElements.forEach(el => el.classList.add('visible'));}});
++  }
++  if ('IntersectionObserver' in window) {
++    const spy = new IntersectionObserver(entries => entries.forEach(entry => {
++      if (!entry.isIntersecting) return;
++      nav.querySelectorAll('a').forEach(link => {
++        const active = link.hash === '#' + entry.target.id;
++        link.classList.toggle('active', active);
++        if (active) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current');
++      });
++    }), {rootMargin:'-15% 0px -60% 0px'});
++    document.querySelectorAll('main > section[id]').forEach(el => spy.observe(el));
++  }
++  const dialog = document.getElementById('project-quick-dialog');
++  PortfolioUI.register(dialog);
++  function render(key) {
++    const p = PORTFOLIO_PROJECTS[key];
++    if (!p) return;
++    document.getElementById('project-quick-type').textContent = p.type;
++    document.getElementById('project-quick-title').textContent = p.name;
++    document.getElementById('project-quick-summary').textContent = p.summary;
++    document.getElementById('project-quick-features').replaceChildren(...p.features.map(text => {
++      const li = document.createElement('li'); li.textContent = text; return li;
++    }));
++    document.getElementById('project-quick-note').textContent = p.note;
++    document.getElementById('project-quick-detail').href = p.details;
++    PortfolioMedia.render(document.getElementById('project-quick-media'), key);
++    PortfolioMedia.live(document.getElementById('project-quick-live'), key);
++  }
++  document.querySelectorAll('[data-project]').forEach(link => {
++    link.setAttribute('aria-haspopup','dialog');
++    link.setAttribute('aria-controls',dialog.id);
++    link.addEventListener('click', e => {
++      if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
++      if (!PORTFOLIO_PROJECTS[link.dataset.project]) return;
++      e.preventDefault();
++      render(link.dataset.project);
++      PortfolioUI.show(dialog, link, link.dataset.project);
++    });
++  });
++  document.addEventListener('portfolio:restore-project', e => render(e.detail));
++  const saved = history.state?.portfolioModal;
++  if (saved?.id === dialog.id && PORTFOLIO_PROJECTS[saved.project]) {
++    render(saved.project);
++    PortfolioUI.show(dialog, document.querySelector('[data-project="'+saved.project+'"]'), saved.project, true);
++  }
++  if (saved?.id === 'contact-dialog') PortfolioUI.show(document.getElementById('contact-dialog'), null, null, true);
++  dialog.querySelectorAll('button').forEach(button => button.addEventListener('click', () => PortfolioUI.close(dialog)));
++})();
+--- original/project-data.js
++++ current/project-data.js
+@@ -0,0 +1,163 @@
++/* Public project URLs verified on 2026-11-02. */
++window.PORTFOLIO_PROJECTS = {
++  "ros": {
++    "type": "WINDOWS / OCR / TTS",
++    "name": "Read On Speak",
++    "summary": "Приложение для считывания субтитров из заданной области экрана и преобразования их в речь.",
++    "features": [
++      "Захват изображения и Windows OCR",
++      "Несколько речевых движков, включая локальные варианты",
++      "Отдельные этапы генерации и воспроизведения аудио",
++      "Графический интерфейс, горячие клавиши и диагностические инструменты"
++    ],
++    "note": "В README описаны показатели производительности и сборка приложения; результаты бенчмарков пока не подтверждались независимым запуском.",
++    "details": "projects/ros.html",
++    "liveUrl": "",
++    "screenshots": [],
++    "video": null
++  },
++  "mama": {
++    "type": "RETAIL / FLASK / SQLITE",
++    "name": "Продукты у Валентины",
++    "summary": "Один продукт с техническим названием mama-shop: покупательская витрина и локальные инструменты магазина.",
++    "features": [
++      "Каталог товаров с фотографиями и корзиной",
++      "Складской учёт, касса и мобильный сканер",
++      "SQLite, экспорт каталога и PWA",
++      "Автоматизированные тесты и сценарии развёртывания"
++    ],
++    "note": "Репозиторий приватный. README указывает на необходимость отдельной приёмки на реальном оборудовании.",
++    "details": "projects/mama.html",
++    "liveUrl": "https://mama-shop.pages.dev/",
++    "screenshots": [
++      {
++        "src": "assets/projects/mama-owner.png",
++        "alt": "Продукты у Валентины — реальный интерфейс проекта",
++        "caption": "Оригинальный скриншот владельца · 02.11.2026",
++        "width": 1857,
++        "height": 968
++      }
++    ],
++    "video": null
++  },
++  "archive": {
++    "type": "PYTHON / AUTOMATION",
++    "name": "Архивариус",
++    "summary": "Настольная программа для распаковки архивов и автоматической классификации файлов.",
++    "features": [
++      "Поддержка ZIP и работа с 7z/RAR через 7-Zip",
++      "Сортировка медиа, документов и аудио",
++      "Пробный режим без изменения файлов",
++      "Журнал перемещений, откат и карантин проблемных архивов"
++    ],
++    "note": "Показан настоящий стартовый экран с пустыми настройками; обработка файлов для снимка не запускалась. Пробный режим не просматривает содержимое архивов заранее.",
++    "details": "projects/archive.html",
++    "liveUrl": "",
++    "screenshots": [
++      {
++        "src": "assets/projects/archive-sort.jpg",
++        "alt": "Архивариус: настоящий стартовый экран сортировки с пустыми путями",
++        "caption": "Настоящее окно Windows-программы · пустые настройки · лог очищен от локального пути · 02.11.2026",
++        "width": 880,
++        "height": 780
++      }
++    ],
++    "video": null
++  },
++  "china": {
++    "type": "WEB / INTERACTIVE STORY",
++    "name": "Поднебесная — China History",
++    "summary": "Интерактивный образовательный сайт о династиях и культурном наследии Китая.",
++    "features": [
++      "Хронология пяти династий",
++      "Иллюстрации, модальные галереи и адаптивная навигация",
++      "Анимации Canvas и звуковое оформление",
++      "Исторический квиз с результатами"
++    ],
++    "note": "Доступна опубликованная версия сайта и оригинальный скриншот владельца. Права на использованные медиа требуют подтверждения перед публикацией портфолио.",
++    "details": "projects/china.html",
++    "liveUrl": "https://china-history-5c2.pages.dev/",
++    "screenshots": [
++      {
++        "src": "assets/projects/china-owner.png",
++        "alt": "Поднебесная — China History — реальный интерфейс проекта",
++        "caption": "Оригинальный скриншот владельца · 02.11.2026",
++        "width": 1857,
++        "height": 968
++      }
++    ],
++    "video": null
++  },
++  "sklad": {
++    "type": "RETAIL / LOCAL APP",
++    "name": "Склад 14",
++    "summary": "Онлайн-каталог и локальная система для магазина строительных материалов.",
++    "features": [
++      "Каталог с поиском, категориями, ценами и корзиной",
++      "Интерфейсы для кассы и складского учёта",
++      "Сканер штрихкодов и экран покупателя",
++      "SQLite, Flask и PWA-ресурсы"
++    ],
++    "note": "Для публичного показа предназначена только покупательская витрина. Кассовые и складские интерфейсы в портфолио не открываются.",
++    "details": "projects/sklad.html",
++    "liveUrl": "https://mama-shop-reform.pages.dev/",
++    "screenshots": [
++      {
++        "src": "assets/projects/sklad-owner.png",
++        "alt": "Склад 14 — реальный интерфейс проекта",
++        "caption": "Оригинальный скриншот владельца · 02.11.2026",
++        "width": 1857,
++        "height": 968
++      }
++    ],
++    "video": null
++  },
++  "deport": {
++    "type": "EDUCATION / INTERACTIVE WEB",
++    "name": "Депортация народов в Казахстан",
++    "summary": "Образовательный сайт об истории депортаций народов в Казахстан в XX веке.",
++    "features": [
++      "Хронология исторических событий и материалы по народам",
++      "Интерактивная карта и документы",
++      "Тесты разной сложности и отслеживание прогресса",
++      "Достижения и геймификация в браузере"
++    ],
++    "note": "Прогресс хранится локально в браузере. Клиентский вход не является полноценной серверной авторизацией.",
++    "details": "projects/deport.html",
++    "liveUrl": "https://kazakhstan-deportation-archive.pages.dev/",
++    "screenshots": [
++      {
++        "src": "assets/projects/deport-owner.png",
++        "alt": "Депортация народов в Казахстан — реальный интерфейс проекта",
++        "caption": "Оригинальный скриншот владельца · 02.11.2026",
++        "width": 1857,
++        "height": 968
++      }
++    ],
++    "video": null
++  },
++  "nfc": {
++    "type": "WEB / BUSINESS LANDING",
++    "name": "TAPCARD / NFC",
++    "summary": "Одностраничный сайт для представления NFC-карточек с переходом к заказу через WhatsApp.",
++    "features": [
++      "Выбор варианта: 2ГИС или Instagram",
++      "Визуальная анимация бесконтактного касания",
++      "Каталог дизайнов, тарифы, блок вопросов и ответов",
++      "Подготовка сообщения заказа в WhatsApp"
++    ],
++    "note": "В README используется название TAPCARD, тогда как раннее описание упоминало APCARD. Финальный бренд требует подтверждения. Сайт не записывает NFC-метки.",
++    "details": "projects/nfc.html",
++    "liveUrl": "https://onetap-kz.pages.dev/",
++    "screenshots": [
++      {
++        "src": "assets/projects/nfc-owner.png",
++        "alt": "TAPCARD / NFC — реальный интерфейс проекта",
++        "caption": "Оригинальный скриншот владельца · 02.11.2026",
++        "width": 1857,
++        "height": 968
++      }
++    ],
++    "video": null
++  }
++};
+--- original/project-media.js
++++ current/project-media.js
+@@ -0,0 +1,88 @@
++(() => {
++  const base = new URL('.', document.currentScript.src);
++  const asset = value => {
++    if (typeof value !== 'string' || !value.startsWith('assets/projects/') || value.includes('..')) return '';
++    return new URL(value, base).href;
++  };
++  const publicUrl = value => {
++    try {
++      const u = new URL(value);
++      if (u.protocol !== 'https:' || u.username || u.password || /^(localhost|127\.|0\.|\[::1\])/.test(u.hostname)) return '';
++      return u.href;
++    } catch { return ''; }
++  };
++  function live(container, key) {
++    const p = PORTFOLIO_PROJECTS[key];
++    container.replaceChildren();
++    if (['ros','archive'].includes(key)) return;
++    const url = publicUrl(p.liveUrl);
++    const element = document.createElement(url ? 'a' : 'span');
++    element.className = url ? 'project-live' : 'live-status';
++    element.textContent = url ? 'Посмотреть сайт ↗' : 'Публичная версия пока не указана';
++    if (url) {
++      element.href=url; element.target='_blank'; element.rel='noopener noreferrer';
++      element.setAttribute('aria-label', 'Посмотреть сайт «' + p.name + '» (новая вкладка)');
++    }
++    container.append(element);
++  }
++  function render(container, key) {
++    const p = PORTFOLIO_PROJECTS[key];
++    container.replaceChildren();
++    container.classList.add('media-gallery');
++    for (const item of p.screenshots) {
++      const src = asset(item.src);
++      if (!src) continue;
++      const figure = document.createElement('figure');
++      const img = document.createElement('img');
++      img.src=src; img.alt=item.alt; img.width=item.width || 1440; img.height=item.height || 1000; img.loading='lazy'; img.decoding='async';
++      const caption = document.createElement('figcaption');
++      caption.append(document.createTextNode(item.caption + ' · '));
++      const full = document.createElement('a');
++      full.href=src; full.target='_blank'; full.rel='noopener noreferrer'; full.textContent='Открыть скриншот';
++      full.setAttribute('aria-label','Открыть скриншот «'+p.name+'» в новой вкладке');
++      caption.append(full); figure.append(img,caption); container.append(figure);
++    }
++    if (!p.screenshots.length) {
++      const pending = document.createElement('p');
++      pending.className='media-pending';
++      pending.textContent='Скриншоты работающего интерфейса пока не предоставлены.';
++      container.append(pending);
++    }
++    const video = p.video;
++    if (video && asset(video.src)) {
++      const player = document.createElement('video');
++      player.controls=true; player.preload='none'; player.playsInline=true;
++      player.src=asset(video.src); player.setAttribute('aria-label','Видеодемонстрация: '+p.name);
++      if (asset(video.poster)) player.poster=asset(video.poster);
++      if (asset(video.captions)) {
++        const track=document.createElement('track');
++        track.kind='captions'; track.srclang='ru'; track.label='Русские субтитры'; track.src=asset(video.captions); track.default=true; player.append(track);
++      }
++      container.append(player);
++      if (video.description) {const text=document.createElement('p');text.className='media-pending';text.textContent=video.description;container.append(text);}
++    } else if (['ros','archive'].includes(key)) {
++      const pending=document.createElement('p');pending.className='media-pending';
++      pending.textContent='Видеодемонстрация будет доступна после предоставления записи владельцем.';
++      container.append(pending);
++    }
++  }
++  window.PortfolioMedia={render,live};
++  function init() {
++    document.querySelectorAll('.other-row[data-project]').forEach(row => {
++      const container=document.createElement('div');container.className='other-live';
++      container.dataset.liveProject=row.dataset.project;row.after(container);
++    });
++    document.querySelectorAll('[data-live-project]').forEach(el => live(el,el.dataset.liveProject));
++    const key=document.body.dataset.projectCase;
++    if (key) {
++      render(document.getElementById('case-media'), key);
++      document.querySelector('[data-return-project]')?.addEventListener('click', e => {
++        if (e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey) return;
++        let ref;
++        try {ref=new URL(document.referrer);} catch {return;}
++        if (ref.origin===location.origin && /\/(index\.html)?$/.test(ref.pathname) && history.length>1) {e.preventDefault();history.back();}
++      });
++    }
++  }
++  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
++})();--- original/review.css
++++ current/review.css
+@@ -0,0 +1,76 @@
++/* Release candidate refinements, preserving the existing type, grid and palette. */
++:root{--sub:#989f9b}
++html{scroll-padding-top:110px;scrollbar-gutter:stable}
++body{overflow-wrap:break-word}
++.skip-link{position:fixed;top:8px;left:8px;z-index:200;background:#b7e7ce;color:#0b160e;padding:12px 20px;transform:translateY(-180%)}
++.skip-link:focus{transform:none}
++.reveal{opacity:1;transform:none}
++.reveal.will-reveal:not(.visible){opacity:0;transform:translateY(24px)}
++.reveal:focus-within{opacity:1!important;transform:none!important}
++.project-actions{display:flex;flex-direction:column;gap:10px;align-items:stretch;flex-shrink:0}
++.project-live,.live-status{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:6px;line-height:1.5;font-size:13px;font-weight:650}
++.project-live{background:var(--accent,#b7e7ce);color:#102016;border:1px solid var(--accent,#b7e7ce)}
++.live-status{color:#aab4ad;background:#191e1b;border:1px dashed #56645b;font-weight:400;max-width:100%;text-align:left}
++.media-gallery{display:grid;gap:16px;margin:22px 0}
++.media-gallery figure{margin:0}
++.media-gallery img{display:block;width:100%;height:auto;border:1px solid #47554b;border-radius:7px;background:#111}
++.media-gallery figcaption,.media-pending{font-size:12px;line-height:1.6;color:#b4beb7;margin-top:9px}
++.media-gallery video{display:block;width:100%;max-height:65svh;background:#0c0d0f;border-radius:7px}
++.media-gallery a{color:var(--accent,#b7e7ce);text-decoration:underline;text-underline-offset:3px}
++.project-screenshot{width:100%;height:100%;object-fit:cover;object-position:top}
++.project-visual.has-screenshot{padding:0}
++.project-visual.has-screenshot::after{display:none}
++.project-quick-note{font-size:13px;line-height:1.7;color:#b5c2b9;border-left:2px solid #89b59a;padding:12px 16px;background:#202723}
++.project-quick-close,.contact-close{flex-shrink:0;min-width:44px;min-height:44px}
++.project-quick-top .kicker{margin:0}
++.project-quick-dialog{max-height:calc(100svh - 32px)}
++.project-quick-dialog h2{overflow-wrap:anywhere}
++.project-quick-actions a,.project-quick-actions button{min-height:46px}
++.project-quick-actions #project-quick-detail{color:var(--text);background:transparent;border:1px solid #65746a}
++.contact-dialog{max-height:calc(100svh - 32px)}
++.contact-channel{box-sizing:border-box}
++.contact-channel.is-unavailable{opacity:1;color:#4e5952;background:#e6e8e1}
++.contact-channel small{opacity:1}
++.contact-dialog :focus-visible{outline:3px solid #245e40;outline-offset:3px}
++.contact-dialog .contact-desc,.contact-help{color:#4d5b51}
++.foot{color:#a1aaa3}
++.hero h1 .dim{color:#8c9490}
++.contact h2 span{color:#919b95}
++.other-header h2{font-size:clamp(30px,4vw,49px);line-height:1.1;letter-spacing:-.06em;margin:0}
++.stack-categories h3{font-size:12px;color:var(--accent);font-weight:650;margin:0 0 14px}
++.case-placeholder{color:#b4bab6}
++@media(max-width:760px){
++  html{scroll-padding-top:90px;scroll-padding-bottom:95px}
++  .project-actions{width:100%}
++  .project-actions>*{width:100%;text-align:center;align-self:stretch}
++  .top-inner{gap:12px}
++  .menu-btn{min-width:44px;min-height:44px}
++  .hero h1{font-size:clamp(31px,8.5vw,64px)}
++  .hero{min-height:auto;gap:35px}
++  .hero-footer{padding-bottom:10px}
++  body.modal-open .mobile-contact{visibility:hidden}
++  .nav{max-height:calc(100svh - 160px);overflow:auto}
++  .contact-dialog,.project-quick-dialog{max-height:calc(100svh - 24px)}
++  .project-quick-inner{padding:22px}
++  .project-quick-dialog h2{font-size:34px}
++}
++@media(min-width:761px){.nav-cta{color:#111917!important}}
++@media(prefers-reduced-motion:reduce){
++  html{scroll-behavior:auto!important}
++  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
++  .reveal.will-reveal:not(.visible){opacity:1;transform:none}
++}
++@media(scripting:none){
++  .reveal{opacity:1;transform:none}
++  .mobile-contact{display:none}
++  @media(max-width:760px){.top{height:auto;position:relative}.top-inner{flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.nav{display:flex;position:static;order:4;flex-basis:100%;max-height:none}.menu-btn{display:none}}
++}
++
++.other-live{padding:0 0 24px 83px}.project-quick-actions>span:empty{display:none}
++@media(max-width:760px){.other-live{padding-left:36px}}
++
++.case-technical{display:grid;gap:16px;margin:0}.case-technical>div{padding:20px;background:#171a1b;border:1px solid #343a37;border-radius:8px}.case-technical dt{font-weight:650;color:#b7e7ce}.case-technical dd{margin:8px 0 0;color:#b4bab6}
++
++.archive.has-screenshot .project-screenshot{object-fit:contain;padding:12px}.visual-note{padding:4px 7px;border-radius:3px;background:#0c0d0fed;color:#b8c9bd}
++
++.project-quick-live:empty{display:none}.project-quick-live{margin:20px 0}.project-quick-live .project-live{min-height:48px}@media(max-width:760px){.project-quick-live .project-live{width:100%}}
+--- original/scripts/build.py
++++ current/scripts/build.py
+@@ -0,0 +1,51 @@
++"""Package the existing static portfolio using an explicit allowlist."""
++from pathlib import Path
++import hashlib
++import json
++import shutil
++import zipfile
++
++ROOT = Path(__file__).resolve().parents[1]
++TARGET = ROOT / "release" / "portfolio-v0.3-rc1"
++ARCHIVE = TARGET.parent / (TARGET.name + ".zip")
++CODE = ["index.html", "contact.css", "contact.js", "review.css",
++        "portfolio.js", "project-data.js", "project-media.js"]
++data_text = (ROOT / "project-data.js").read_text(encoding="utf-8")
++data = json.loads(data_text[data_text.index("{"):data_text.rindex(";")])
++selected = [Path(name) for name in CODE]
++selected += [path.relative_to(ROOT) for path in sorted((ROOT / "projects").glob("*.html"))]
++for project in data.values():
++    for shot in project["screenshots"]:
++        selected.append(Path(shot["src"]))
++    video = project.get("video")
++    if video:
++        selected.extend(Path(video[key]) for key in ("src", "poster", "captions") if video.get(key))
++selected = sorted(set(selected))
++for relative in selected:
++    source = (ROOT / relative).resolve()
++    if not source.is_relative_to(ROOT) or not source.is_file():
++        raise SystemExit(f"Missing or unsafe input: {relative}")
++    if any(part.startswith(".") for part in relative.parts):
++        raise SystemExit(f"Hidden input is forbidden: {relative}")
++TARGET.mkdir(parents=True, exist_ok=True)
++expected = {p.as_posix() for p in selected} | {"manifest.json"}
++unexpected = [p for p in TARGET.rglob("*") if p.is_file() and p.relative_to(TARGET).as_posix() not in expected]
++if unexpected:
++    raise SystemExit("Unexpected files in release directory; review them manually before building.")
++manifest = {}
++for relative in selected:
++    destination = TARGET / relative
++    destination.parent.mkdir(parents=True, exist_ok=True)
++    shutil.copy2(ROOT / relative, destination)
++    digest = hashlib.sha256(destination.read_bytes()).hexdigest()
++    assert digest == hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
++    manifest[relative.as_posix()] = digest
++(TARGET / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
++temporary = ARCHIVE.with_suffix(".tmp.zip")
++with zipfile.ZipFile(temporary, "w", zipfile.ZIP_DEFLATED) as archive:
++    for relative in [*selected, Path("manifest.json")]:
++        archive.write(TARGET / relative, relative.as_posix())
++temporary.replace(ARCHIVE)
++print(f"Ready: {len(selected)} files")
++print(TARGET)
++print(ARCHIVE)
+--- original/projects/archive.html
++++ current/projects/archive.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: Архивариус" name="description"/><title>Архивариус — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">PYTHON / AUTOMATION / ПРОЕКТ</p><h1>Архивариус</h1><p class="lead">Настольная программа для распаковки архивов и автоматической классификации файлов.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/Project_Programm-sort" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Поддержка ZIP и работа с 7z/RAR через 7-Zip</li><li>Сортировка медиа, документов и аудио</li><li>Пробный режим без изменения файлов</li><li>Журнал перемещений, откат и карантин проблемных архивов</li></ul><h2>Статус и ограничения</h2><p class="note">Пробный режим не просматривает содержимое архивов заранее; итоговая сортировка требует отдельной проверки на реальных данных.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="archive"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-archive" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">PYTHON / AUTOMATION / ПРОЕКТ</p><h1>Архивариус</h1><p class="lead">Настольная программа для распаковки архивов и автоматической классификации файлов.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="archive"></div><h2>Что реализовано</h2><ul class="features"><li>Поддержка ZIP и работа с 7z/RAR через 7-Zip</li><li>Сортировка медиа, документов и аудио</li><li>Пробный режим без изменения файлов</li><li>Журнал перемещений, откат и карантин проблемных архивов</li></ul><h2>Статус и ограничения</h2><p class="note">Показан настоящий стартовый экран с пустыми настройками; обработка файлов для снимка не запускалась. Пробный режим не просматривает содержимое архивов заранее.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Интерфейс и обработка</dt><dd>CustomTkinter формирует вкладки сортировки, дубликатов и отчётов. Фоновая обработка передаёт сообщения через очередь; обновление виджетов выполняет главный поток интерфейса.</dd></div><div><dt>Файловый конвейер</dt><dd>Архивы распаковываются, а файлы классифицируются по категориям. ZIP поддерживается средствами Python; 7z и RAR используют внешний 7-Zip. Перед переносом учитываются конфликты имён.</dd></div><div><dt>Проверка и восстановление</dt><dd>Перенос использует копирование и проверку SHA-256 перед удалением исходника. Журнал хранит сведения для отката. Пробный запуск помогает оценить действия над доступными файлами, но не раскрывает содержимое архивов.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Пользователь выбирает источник, назначение и карантин, задаёт категории и сначала выполняет пробный запуск. После реальной обработки можно изучить журнал и отчёт; откат имеет ограничения, описанные в документации программы.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>--- original/projects/china.html
++++ current/projects/china.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: Поднебесная — China History" name="description"/><title>Поднебесная — China History — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">WEB / INTERACTIVE STORY / ПРОЕКТ</p><h1>Поднебесная — China History</h1><p class="lead">Интерактивный образовательный сайт о династиях и культурном наследии Китая.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/China-history" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Хронология пяти династий</li><li>Иллюстрации, модальные галереи и адаптивная навигация</li><li>Анимации Canvas и звуковое оформление</li><li>Исторический квиз с результатами</li></ul><h2>Статус и ограничения</h2><p class="note">Статический веб-проект. Перед публикацией портфолио потребуются реальные скриншоты и проверка прав на медиа.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="china"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-china" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">WEB / INTERACTIVE STORY / ПРОЕКТ</p><h1>Поднебесная — China History</h1><p class="lead">Интерактивный образовательный сайт о династиях и культурном наследии Китая.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="china"></div><h2>Что реализовано</h2><ul class="features"><li>Хронология пяти династий</li><li>Иллюстрации, модальные галереи и адаптивная навигация</li><li>Анимации Canvas и звуковое оформление</li><li>Исторический квиз с результатами</li></ul><h2>Статус и ограничения</h2><p class="note">Доступна опубликованная версия сайта и оригинальный скриншот владельца. Права на использованные медиа требуют подтверждения перед публикацией портфолио.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Статическая структура</dt><dd>HTML-страницы представляют главную, династии, изобретения и квиз. Стили и браузерный JavaScript обеспечивают навигацию и интерактивность без собственного серверного приложения.</dd></div><div><dt>Визуальный слой</dt><dd>Canvas-анимации, звуковое оформление и модальные галереи дополняют исторические материалы. Ключевой контент остаётся текстовым, а страницы адаптируются к ширине экрана.</dd></div><div><dt>Квиз</dt><dd>Вопросы и обработка ответов работают в браузере. Результат учебного теста является частью пользовательского сценария, а не подтверждённой метрикой эффективности проекта.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Посетитель переходит от общей хронологии к выбранной династии, изучает иллюстрации и затем проходит квиз. Снимок показывает реальную главную страницу при локальном запуске.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>--- original/projects/deport.html
++++ current/projects/deport.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: Депортация народов в Казахстан" name="description"/><title>Депортация народов в Казахстан — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">EDUCATION / INTERACTIVE WEB / ПРОЕКТ</p><h1>Депортация народов в Казахстан</h1><p class="lead">Образовательный сайт об истории депортаций народов в Казахстан в XX веке.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/kazakhstan-deportation-archive" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Хронология исторических событий и материалы по народам</li><li>Интерактивная карта и документы</li><li>Тесты разной сложности и отслеживание прогресса</li><li>Достижения и геймификация в браузере</li></ul><h2>Статус и ограничения</h2><p class="note">Прогресс хранится локально в браузере. Клиентский вход не является полноценной серверной авторизацией.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="deport"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-deport" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">EDUCATION / INTERACTIVE WEB / ПРОЕКТ</p><h1>Депортация народов в Казахстан</h1><p class="lead">Образовательный сайт об истории депортаций народов в Казахстан в XX веке.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="deport"></div><h2>Что реализовано</h2><ul class="features"><li>Хронология исторических событий и материалы по народам</li><li>Интерактивная карта и документы</li><li>Тесты разной сложности и отслеживание прогресса</li><li>Достижения и геймификация в браузере</li></ul><h2>Статус и ограничения</h2><p class="note">Прогресс хранится локально в браузере. Клиентский вход не является полноценной серверной авторизацией.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Материалы и навигация</dt><dd>Статические HTML-страницы объединяют хронологию, материалы по народам, документы и учебные тесты. Интерактивная карта дополняет историческое изложение.</dd></div><div><dt>Прогресс</dt><dd>Результаты и достижения сохраняются в localStorage браузера. Они не синхронизируются между устройствами и удаляются при очистке данных сайта.</dd></div><div><dt>Границы входа</dt><dd>Клиентский вход не заменяет серверную авторизацию. Исторические материалы и права на иллюстрации требуют отдельной проверки перед публичным использованием.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Посетитель изучает хронологию и документы, выбирает сложность теста и видит сохранённый в своём браузере прогресс. Снимок сделан с локально открытой главной страницы; весь сайт в рамках этой задачи не проходил приёмку.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>--- original/projects/mama.html
++++ current/projects/mama.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: Продукты у Валентины" name="description"/><title>Продукты у Валентины — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">RETAIL / FLASK / SQLITE / ПРОЕКТ</p><h1>Продукты у Валентины</h1><p class="lead">Один продукт с техническим названием mama-shop: покупательская витрина и локальные инструменты магазина.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/mama-shop" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Каталог товаров с фотографиями и корзиной</li><li>Складской учёт, касса и мобильный сканер</li><li>SQLite, экспорт каталога и PWA</li><li>Автоматизированные тесты и сценарии развёртывания</li></ul><h2>Статус и ограничения</h2><p class="note">Репозиторий приватный. README указывает на необходимость отдельной приёмки на реальном оборудовании.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="mama"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-mama" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">RETAIL / FLASK / SQLITE / ПРОЕКТ</p><h1>Продукты у Валентины</h1><p class="lead">Один продукт с техническим названием mama-shop: покупательская витрина и локальные инструменты магазина.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="mama"></div><h2>Что реализовано</h2><ul class="features"><li>Каталог товаров с фотографиями и корзиной</li><li>Складской учёт, касса и мобильный сканер</li><li>SQLite, экспорт каталога и PWA</li><li>Автоматизированные тесты и сценарии развёртывания</li></ul><h2>Статус и ограничения</h2><p class="note">Репозиторий приватный. README указывает на необходимость отдельной приёмки на реальном оборудовании.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Два пользовательских сценария</dt><dd>Покупатель работает с каталогом и корзиной. Сотрудник использует отдельные инструменты для товаров, остатков, продаж и сканирования. Служебные экраны не входят в публичную демонстрацию.</dd></div><div><dt>Данные и сервер</dt><dd>Flask обслуживает прикладную логику, SQLite хранит данные. Для витрины предусмотрена выгрузка каталога в JSON; интерфейс использует фотографии товаров и PWA-ресурсы.</dd></div><div><dt>Границы продукта</dt><dd>Система объединяет онлайн-витрину с локальными инструментами магазина. Работа на торговом оборудовании и обслуживание действующей базы требуют самостоятельной приёмки.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Покупатель просматривает товары и собирает корзину. Сотрудник ведёт ассортимент и остатки в локальной части системы; реальные чеки и данные магазина в портфолио не используются.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>--- original/projects/nfc.html
++++ current/projects/nfc.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: TAPCARD / NFC" name="description"/><title>TAPCARD / NFC — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">WEB / BUSINESS LANDING / ПРОЕКТ</p><h1>TAPCARD / NFC</h1><p class="lead">Одностраничный сайт для представления NFC-карточек с переходом к заказу через WhatsApp.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/NFC" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Выбор варианта: 2ГИС или Instagram</li><li>Визуальная анимация бесконтактного касания</li><li>Каталог дизайнов, тарифы, блок вопросов и ответов</li><li>Подготовка сообщения заказа в WhatsApp</li></ul><h2>Статус и ограничения</h2><p class="note">В README используется название TAPCARD, тогда как раннее описание упоминало APCARD. Финальный бренд требует подтверждения. Сайт не записывает NFC-метки.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="nfc"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-nfc" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">WEB / BUSINESS LANDING / ПРОЕКТ</p><h1>TAPCARD / NFC</h1><p class="lead">Одностраничный сайт для представления NFC-карточек с переходом к заказу через WhatsApp.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="nfc"></div><h2>Что реализовано</h2><ul class="features"><li>Выбор варианта: 2ГИС или Instagram</li><li>Визуальная анимация бесконтактного касания</li><li>Каталог дизайнов, тарифы, блок вопросов и ответов</li><li>Подготовка сообщения заказа в WhatsApp</li></ul><h2>Статус и ограничения</h2><p class="note">В README используется название TAPCARD, тогда как раннее описание упоминало APCARD. Финальный бренд требует подтверждения. Сайт не записывает NFC-метки.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Одна страница</dt><dd>Разметка, стили и JavaScript размещены в одном HTML-файле. Оформление использует Tailwind CSS через CDN и шрифт из Google Fonts; для этих ресурсов нужен доступ к сети.</dd></div><div><dt>Состояние демонстрации</dt><dd>Переключение между 2ГИС и Instagram меняет оформление карточки, инструкцию и текст обращения. Каталог и тарифы помогают выбрать комплект.</dd></div><div><dt>Переход к заказу</dt><dd>JavaScript подготавливает сообщение и открывает WhatsApp. Пользователь отправляет сообщение самостоятельно; собственной серверной обработки заказа и записи NFC-меток на сайте нет.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Посетитель выбирает вариант карточки и тариф, смотрит анимацию касания и переходит к обсуждению заказа в WhatsApp. На снимке показан настоящий локально работающий лендинг.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>--- original/projects/ros.html
++++ current/projects/ros.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: Read On Speak" name="description"/><title>Read On Speak — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">WINDOWS / OCR / TTS / ПРОЕКТ</p><h1>Read On Speak</h1><p class="lead">Приложение для считывания субтитров из заданной области экрана и преобразования их в речь.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/ROS" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Захват изображения и Windows OCR</li><li>Несколько речевых движков, включая локальные варианты</li><li>Отдельные этапы генерации и воспроизведения аудио</li><li>Графический интерфейс, горячие клавиши и диагностические инструменты</li></ul><h2>Статус и ограничения</h2><p class="note">В README описаны показатели производительности и сборка приложения; результаты бенчмарков пока не подтверждались независимым запуском.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="ros"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-ros" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">WINDOWS / OCR / TTS / ПРОЕКТ</p><h1>Read On Speak</h1><p class="lead">Приложение для считывания субтитров из заданной области экрана и преобразования их в речь.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="ros"></div><h2>Что реализовано</h2><ul class="features"><li>Захват изображения и Windows OCR</li><li>Несколько речевых движков, включая локальные варианты</li><li>Отдельные этапы генерации и воспроизведения аудио</li><li>Графический интерфейс, горячие клавиши и диагностические инструменты</li></ul><h2>Статус и ограничения</h2><p class="note">В README описаны показатели производительности и сборка приложения; результаты бенчмарков пока не подтверждались независимым запуском.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Конвейер обработки</dt><dd>Захват выбранной области экрана передаёт изображение в Windows OCR. Распознанный текст поступает в речевой движок; генерация аудио и его воспроизведение выделены в отдельные этапы.</dd></div><div><dt>Управление</dt><dd>Графический интерфейс и горячие клавиши управляют областью распознавания и чтением. Диагностические инструменты помогают разбирать поведение конвейера.</dd></div><div><dt>Окружение</dt><dd>Python-приложение рассчитано на Windows OCR и несколько вариантов TTS, включая локальные. Фактическая задержка зависит от оборудования и выбранного движка; замеры в этом портфолио не заявляются.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Пользователь выбирает область с субтитрами, настраивает голос и управляет чтением. Для демонстрации нужен отдельный ролик с тестовым текстом, без захвата личных окон.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>--- original/projects/sklad.html
++++ current/projects/sklad.html
+@@ -1,4 +1,4 @@
+ <!DOCTYPE html>
+ <html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Кейс: Склад 14" name="description"/><title>Склад 14 — кейс / портфолио</title><style>
+ :root{--bg:#0c0d0f;--panel:#171a1b;--text:#f1f2ef;--muted:#b4bab6;--accent:#b7e7ce;--line:#343a37}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 Inter,system-ui,Arial,sans-serif}.wrap{width:min(880px,calc(100% - 40px));margin:auto}header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#0c0d0ff5;padding:18px 0;z-index:5}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(39px,7vw,78px);letter-spacing:-.055em;line-height:1.05;margin:30px 0}h2{letter-spacing:-.035em;font-size:30px;margin:65px 0 20px}p,li{color:var(--muted)}.eyebrow{font:12px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em}.lead{font-size:21px;line-height:1.55}.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;list-style:none;padding:0}.features li{border:1px solid var(--line);padding:18px 20px;border-radius:8px;background:var(--panel)}.note{padding:20px;border-left:3px solid #6d8e79;background:var(--panel)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 48px}.btn{padding:13px 20px;border-radius:6px;background:var(--accent);color:#0b160e;font-weight:700}.btn.alt{background:transparent;border:1px solid #748378;color:var(--text)}.btn:hover{text-decoration:none;filter:brightness(1.1)}footer{border-top:1px solid var(--line);padding:38px 0;margin-top:100px;font-size:14px;color:var(--muted)}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.features{grid-template-columns:1fr}.actions a{width:100%;text-align:center}}
+-</style><link href="../contact.css" rel="stylesheet"/></head><body><header><div class="wrap"><a href="../index.html#works">← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap"><p class="eyebrow" style="margin-top:90px">RETAIL / LOCAL APP / ПРОЕКТ</p><h1>Склад 14</h1><p class="lead">Онлайн-каталог и локальная система для магазина строительных материалов.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><a class="btn alt" href="https://github.com/egorkitsun2/Sklad-14" rel="noopener noreferrer" target="_blank">Репозиторий GitHub ↗</a></div><h2>Что реализовано</h2><ul class="features"><li>Каталог с поиском, категориями, ценами и корзиной</li><li>Интерфейсы для кассы и складского учёта</li><li>Сканер штрихкодов и экран покупателя</li><li>SQLite, Flask и PWA-ресурсы</li></ul><h2>Статус и ограничения</h2><p class="note">В текущей версии README предупреждает об отсутствии полноценной защиты служебных маршрутов. Публично демонстрировать следует только изолированную витрину.</p><h2>Подробнее</h2><p>В следующих версиях здесь будут реальные скриншоты, ход разработки, технические решения и результаты проверки. До этого не будем подменять подтверждённые факты рекламными обещаниями.</p></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../contact.js"></script></body></html>+</style><link href="../contact.css" rel="stylesheet"/><link href="../review.css" rel="stylesheet"/></head><body data-project-case="sklad"><a class="skip-link" href="#main">Перейти к содержимому</a><header><div class="wrap"><a href="../index.html#project-sklad" data-return-project>← Все проекты</a><a data-contact="" href="../index.html#contact">Связаться →</a></div></header><main class="wrap" id="main" tabindex="-1"><p class="eyebrow" style="margin-top:90px">RETAIL / LOCAL APP / ПРОЕКТ</p><h1>Склад 14</h1><p class="lead">Онлайн-каталог и локальная система для магазина строительных материалов.</p><div class="actions"><a class="btn" data-contact="" href="../index.html#contact">Обсудить похожий проект ↗</a><span class="live-status">Исходный код в приватном репозитории</span></div><div class="actions" data-live-project="sklad"></div><h2>Что реализовано</h2><ul class="features"><li>Каталог с поиском, категориями, ценами и корзиной</li><li>Интерфейсы для кассы и складского учёта</li><li>Сканер штрихкодов и экран покупателя</li><li>SQLite, Flask и PWA-ресурсы</li></ul><h2>Статус и ограничения</h2><p class="note">Для публичного показа предназначена только покупательская витрина. Кассовые и складские интерфейсы в портфолио не открываются.</p><section aria-labelledby="technical-title"><h2 id="technical-title">Техническое устройство</h2><dl class="case-technical"><div><dt>Каталог</dt><dd>Покупательская витрина объединяет поиск, категории, цены и корзину. Этот сценарий отделён от кассы и складского учёта.</dd></div><div><dt>Прикладная часть</dt><dd>Flask и SQLite используются для локальных операций магазина. В составе проекта описаны сканер штрихкодов, экран покупателя и PWA-ресурсы.</dd></div><div><dt>Публичная демонстрация</dt><dd>Внешняя ссылка может вести только на согласованную покупательскую витрину. Служебные экраны, внутренние адреса и рабочие данные в демонстрацию не включаются.</dd></div></dl></section><section aria-labelledby="workflow-title"><h2 id="workflow-title">Основной сценарий</h2><p>Покупатель находит строительные материалы через категории или поиск и собирает корзину. Для показа этого сценария владелец должен предоставить публичный адрес витрины и обезличенные скриншоты.</p></section><h2>Скриншоты и демонстрация</h2><div id="case-media"></div></main><footer><div class="wrap"><a href="../index.html">← На главную</a> · <a data-contact="" href="../index.html#contact">Связаться</a></div></footer><script src="../project-data.js"></script><script src="../project-media.js"></script><script src="../contact.js"></script></body></html>

@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-11-02T13:46:00.677043+00:00",
+  "source": "Unmodified application source in an isolated copy, default empty settings; UI scaling 80%; diagnostic log cleared to omit the local 7-Zip path; no processing started",
+  "images": [
+    {
+      "file": "assets\\projects\\archive-sort.jpg",
+      "size": [
+        880,
+        780
+      ],
+      "sha256": "ebe5b6fb139e329421c761c60652afdd0dfdda95638b76ec4af670cee351cb5c"
+    }
+  ]
+}

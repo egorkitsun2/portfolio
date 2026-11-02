@@ -1,0 +1,145 @@
+{
+  "startedAt": "2026-11-02T14:22:38.009Z",
+  "browser": "157.0.8103.15",
+  "checks": [
+    {
+      "name": "Navigation, anchors and fixed header",
+      "passed": true
+    },
+    {
+      "name": "Contact modal, Escape, focus trap, focus and scroll restoration",
+      "passed": true
+    },
+    {
+      "name": "Owner contacts use exact verified URLs and a confirmed telephone number",
+      "passed": true
+    },
+    {
+      "name": "WhatsApp Telegram and Instagram open their real destinations in new tabs",
+      "passed": true
+    },
+    {
+      "name": "Contact backdrop, inner padding and close button",
+      "passed": true
+    },
+    {
+      "name": "Every project preview and all close paths",
+      "passed": true
+    },
+    {
+      "name": "Browser Back and Forward with project and contact modals",
+      "passed": true
+    },
+    {
+      "name": "Detail case return restores previous preview and scroll",
+      "passed": true
+    },
+    {
+      "name": "Screenshot popup and local image integrity",
+      "passed": true
+    },
+    {
+      "name": "Contact and project state survive reload",
+      "passed": true
+    },
+    {
+      "name": "Verified external GitHub link opens a real new tab",
+      "passed": true
+    },
+    {
+      "name": "Five confirmed published URLs and no private repository links",
+      "passed": true
+    },
+    {
+      "name": "All five site buttons open verified projects in new tabs",
+      "passed": true
+    },
+    {
+      "name": "Modified clicks preserve native link behavior",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 320",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 375",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 390",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 768",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 1024",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 1440",
+      "passed": true
+    },
+    {
+      "name": "Responsive layout and dialogs at 1920",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu by keyboard, Escape, outside click, navigation",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion including runtime preference change",
+      "passed": true
+    },
+    {
+      "name": "Case ros desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Case mama desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Case archive desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Case china desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Case sklad desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Case deport desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Case nfc desktop/tablet/phone, contacts and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "Axe WCAG 2.2 AA checks of every open modal",
+      "passed": true
+    },
+    {
+      "name": "Progressive enhancement without JavaScript",
+      "passed": true
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "liveUrls": [
+    "https://mama-shop.pages.dev/",
+    "https://china-history-5c2.pages.dev/",
+    "https://mama-shop-reform.pages.dev/",
+    "https://kazakhstan-deportation-archive.pages.dev/",
+    "https://onetap-kz.pages.dev/"
+  ],
+  "finishedAt": "2026-11-02T14:23:20.843Z"
+}
