@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "name": "Original illustration preserved and owner screenshot unchanged",
+      "passed": true
+    },
+    {
+      "name": "Manual controls, arrow keys and slide accessibility",
+      "passed": true
+    },
+    {
+      "name": "Details gallery displays real original and restores focus and main slide",
+      "passed": true
+    },
+    {
+      "name": "Technical case contains the same program gallery",
+      "passed": true
+    },
+    {
+      "name": "Responsive carousel and gallery 320",
+      "passed": true
+    },
+    {
+      "name": "Responsive carousel and gallery 390",
+      "passed": true
+    },
+    {
+      "name": "Responsive carousel and gallery 768",
+      "passed": true
+    },
+    {
+      "name": "Responsive carousel and gallery 1440",
+      "passed": true
+    },
+    {
+      "name": "Automatic rotation loops without changing card geometry",
+      "passed": true
+    },
+    {
+      "name": "Explicit pause and resume",
+      "passed": true
+    },
+    {
+      "name": "Hover and keyboard focus suspend rotation",
+      "passed": true
+    },
+    {
+      "name": "Open modal and offscreen card suspend rotation",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion stops automatic changes while manual navigation works",
+      "passed": true
+    },
+    {
+      "name": "Axe audit of visible main carousel and ROS modal gallery",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript retains the original illustration and case navigation",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpErrors": [],
+  "startedAt": "2026-11-02T14:36:50.271Z",
+  "finishedAt": "2026-11-02T14:37:00.542Z"
+}

@@ -1,0 +1,266 @@
+diff --git a/OWNER_MATERIALS.md b/OWNER_MATERIALS.md
+index 3864f35..832cb11 100644
+--- a/OWNER_MATERIALS.md
++++ b/OWNER_MATERIALS.md
+@@ -1,9 +1,10 @@
+ # Что ещё требуется от владельца
+ 
+-1. Скриншот настоящего Read On Speak с тестовым текстом, без личных окон, имён, путей и уведомлений. Его иллюстрация на главной пока явно обозначена как концепт.
+-2. При желании — видеодемонстрации Read On Speak и Архивариуса в MP4/WebM, с текстовым описанием и субтитрами для речи. Для Архивариуса уже добавлен настоящий снимок пустого стартового окна; обработка файлов для него не запускалась.
+-3. Подтверждение права использовать исторические иллюстрации, фотографии товаров и бренды в публичном портфолио.
+-4. Подтверждение финального названия TAPCARD / NFC и редактура технических описаний проектов перед публикацией.
++1. При желании — видеодемонстрации Read On Speak и Архивариуса в MP4/WebM, с текстовым описанием и субтитрами для речи. Для Архивариуса уже добавлен настоящий снимок пустого стартового окна; обработка файлов для него не запускалась.
++2. Подтверждение права использовать исторические иллюстрации, фотографии товаров и бренды в публичном портфолио.
++3. Подтверждение финального названия TAPCARD / NFC и редактура технических описаний проектов перед публикацией.
++
++Скриншот Read On Speak получен и добавлен в карточку и галерею. Дополнительные снимки разных вкладок программы можно предоставить по желанию.
+ 
+ Личные контакты WhatsApp, Telegram, Instagram и номер для звонков получены и подключены.
+ 
+diff --git a/README.md b/README.md
+index 35928c9..a6d1375 100644
+--- a/README.md
++++ b/README.md
+@@ -25,7 +25,7 @@ python -m http.server 8000 --bind 127.0.0.1 --directory release/portfolio-v0.3-r
+ - `project-data.js` — сведения о проектах, проверенные публичные URL, скриншоты и необязательное видео.
+ - `project-media.js` — галереи и ссылки на опубликованные проекты.
+ - `contact.js` — подтверждённые контакты и общая работа модальных окон.
+-- `portfolio.js` — меню, прокрутка, анимации и быстрые просмотры.
++- `portfolio.js` — меню, прокрутка, анимации, карусель ROS и быстрые просмотры.
+ - `review.css` — доступность и адаптивные доработки исходного оформления.
+ - `projects/*.html` — технические кейсы.
+ - `assets/projects/` — реальные изображения интерфейсов.
+@@ -52,3 +52,5 @@ video: {
+ Git в исходной папке отсутствовал. Исходное состояние сохранено в `.review/original-v0.3.zip`; контрольные суммы — в `.review/original-manifest.json`.
+ 
+ Ничего не опубликовано. Репозитории представленных проектов и настройки хостинга не изменялись. Публикация требует отдельного решения владельца.
++
++Карусель Read On Speak сохраняет исходную иллюстрацию и показывает настоящий скриншот. Автосмена — раз в 6 секунд, доступны стрелки и пауза. При reduced-motion работает ручное переключение; в быстром просмотре и кейсе размещена галерея оригиналов. Сейчас предоставлен один снимок ROS.
+diff --git a/RELEASE_REPORT.md b/RELEASE_REPORT.md
+index fa51b02..c9c8532 100644
+--- a/RELEASE_REPORT.md
++++ b/RELEASE_REPORT.md
+@@ -17,7 +17,7 @@
+ 
+ У пяти веб-проектов добавлены кнопки «Посмотреть сайт»: на главной, в быстром просмотре и в кейсе. Адреса предоставлены владельцем и проверены по HTTP-ответу, заголовкам и фактическому открытию новых вкладок. В модальном окне кнопка находится сразу под описанием. Служебные адреса не используются.
+ 
+-Пять PNG из screenshots_for_projects скопированы без изменения байтов; SHA-256 оригиналов и копий совпадает. Для Архивариуса снято настоящее окно изолированной копии с пустыми настройками. Масштаб интерфейса — 80%; диагностический лог очищен до снимка, чтобы исключить локальный путь. Обработка файлов не запускалась. Иллюстрация Read On Speak пока явно помечена как концепт.
++Шесть PNG из screenshots_for_projects скопированы без изменения байтов; SHA-256 оригиналов и копий совпадает. Для Архивариуса снято настоящее окно изолированной копии с пустыми настройками. Масштаб интерфейса — 80%; диагностический лог очищен до снимка, чтобы исключить локальный путь. Обработка файлов не запускалась. Для Read On Speak добавлен скриншот владельца; исходная иллюстрация сохранена как первый слайд и явно подписана как концепт.
+ 
+ Исправлены удержание и возврат фокуса, Escape, закрытие по фону, Back/Forward, восстановление после обновления страницы и возврата из кейса. Сохранены позиция прокрутки и модифицированные клики. Улучшены мобильное меню, контраст, структура заголовков, skip-link и reduced-motion. При отключённом JavaScript доступны контент, меню и страницы кейсов.
+ 
+@@ -41,15 +41,15 @@
+ 
+ В контексте портфолио: **0 ошибок консоли, 0 исключений JavaScript, 0 HTTP-ошибок**. Внешние проекты учитывались отдельно.
+ 
+-**Lighthouse 13.6.0:** до добавления личных контактов полный прогон десяти экранов дал Performance 100 / Accessibility 100. После подключения контактов повторены затронутые экраны: главная на телефоне — **Performance 93 / Accessibility 100** (LCP 1,7 с, TBT около 300 мс), главная на компьютере и контактное окно — **100 / 100**. Предыдущие оценки семи кейсов — 100 / 100; в этом обновлении Lighthouse для них повторно не запускался. Оценка относится к локальной статической сборке, а не к хостингу и представленным проектам.
++**Lighthouse 13.6.0:** после добавления ROS повторены главная в мобильном и настольном режимах, контактное окно и страница ROS. Performance / Accessibility: home-mobile 100/100, home-desktop 100/100, contact-mobile 100/100, кейс ROS 100/100. Остальные шесть кейсов в этом обновлении Lighthouse повторно не проверялись; их предыдущие оценки — 100/100. Оценки относятся к локальной сборке.
+ 
+-Статически проверены восемь HTML-страниц: повторяющихся id, отсутствующих ресурсов и сломанных якорей не найдено. Четыре JavaScript-файла прошли node --check. Сборка содержит 20 файлов сайта и manifest.json. SHA-256 исходников, готовой папки и ZIP совпадают; лишних файлов в архиве нет.
++Статически проверены восемь HTML-страниц: повторяющихся id, отсутствующих ресурсов и сломанных якорей не найдено. Четыре JavaScript-файла прошли node --check. Сборка содержит 21 файл сайта и manifest.json. SHA-256 исходников, готовой папки и ZIP совпадают; лишних файлов в архиве нет.
+ 
+ Визуально просмотрены оригинальные материалы владельца, снимок Архивариуса, главная и блок работ на компьютере, мобильные модальные окна. Исходные репозитории не редактировались; хеши 17 Python-файлов, использованных для изолированной копии Архивариуса, после съёмки не изменились.
+ 
+ ## Ограничения
+ 
+-- Нужен настоящий скриншот Read On Speak. Воспроизведение, звук и субтитры видеодемонстраций пока не проверялись на реальных материалах.
++- Для ROS предоставлен один настоящий скриншот; галерея поддерживает добавление других снимков. Воспроизведение, звук и субтитры видеодемонстраций пока не проверялись на реальных материалах.
+ - Использована эмуляция размеров в Chromium. Физические телефоны, Safari/Firefox и ручная проверка скринридером не использовались.
+ - На опубликованной главной исторического проекта обнаружена ошибка `Cannot read properties of null (reading 'addEventListener')`. Страница отвечает HTTP 200 и открывается. Ошибка относится к внешнему проекту; изменение его репозитория исключено условиями задачи.
+ - Полная функциональная приёмка представленных проектов и торгового оборудования не выполнялась. Права на медиа и финальный бренд TAPCARD требуют подтверждения.
+@@ -58,7 +58,7 @@
+ 
+ ## Файлы и исполнители
+ 
+-Изменены index.html, contact.js, README.md и семь projects/*.html. Добавлены portfolio.js, project-data.js, project-media.js, review.css, scripts/build.py, шесть используемых изображений assets/projects/, OWNER_MATERIALS.md и этот отчёт. contact.css сохранён без изменений.
++Изменены index.html, contact.js, README.md и семь projects/*.html. Добавлены portfolio.js, project-data.js, project-media.js, review.css, scripts/build.py, семь используемых изображений assets/projects/, OWNER_MATERIALS.md и этот отчёт. contact.css сохранён без изменений.
+ 
+ Основной агент выполнил реализацию, интеграцию, визуальный осмотр и все перечисленные браузерные и статические проверки. Подагент выполнил два независимых read-only ревью; результаты проверены основным агентом. Существенных замечаний в итоговом ревью не осталось.
+ 
+@@ -79,3 +79,20 @@
+ Проверочные инструменты находятся отдельно в кэше окружения; сайт зависимостей не получил. В архив не включены .review, screenshots_for_projects, инструменты проверки или исходники других проектов.
+ 
+ Хостинг, production и публичность репозиториев не менялись. Работа остановлена перед публикацией; дальнейшее решение принимает владелец.
++
++
++## Доработка ROS — 02.11.2026
++
++На главной сохранена исходная иллюстрация и добавлена карусель из двух слайдов: концепт и настоящий снимок интерфейса. Автосмена происходит раз в 6 секунд. Есть ручные стрелки и пауза; ручное переключение останавливает автосмену до явного продолжения. При наведении, фокусе, открытом модальном окне, уходе карточки за пределы экрана и скрытой вкладке автосмена приостанавливается. При reduced-motion автосмена и переходы отключены, стрелки доступны.
++
++Кнопка «Подробнее» открывает прежнее модальное окно с галереей программы и полноразмерным оригиналом. Та же галерея доступна в техническом кейсе. Сейчас используется один предоставленный снимок; дополнительные изображения не выдумывались. Скриншот скопирован без изменения байтов, исходные репозитории программ не затронуты.
++
++Фактические проверки: 15/15 новых сценариев ROS и 32/32 общих сценария. Автотаймер проверен через Playwright Clock; проверены цикл, пауза/продолжение, наведение, фокус, модальное окно, выход за экран, reduced-motion, клавиатура, открытие оригинала и возврат фокуса. Карусель и галерея проверены на 320, 390, 768, 1440 px; общие проверки — до 1920 px. Axe не обнаружил нарушений на главной с каруселью и в галерее ROS. В браузере нет ошибок JavaScript, консоли или HTTP.
++
++Во время проверки исправлены несовпадения видимых и доступных подписей кнопки паузы и трёх существующих ссылок других проектов. Основной агент выполнил изменение и проверки самостоятельно, без подагентов.
++
++Изменены index.html, portfolio.js, project-data.js, project-media.js, review.css, README.md, OWNER_MATERIALS.md и этот отчёт. Добавлен assets/projects/ros-interface.png. Обновлены готовая папка, ZIP и отчётные материалы. До начала правок Git был чистым на main, commit 4eee066; новых коммитов не создавалось. Резервная копия состояния до этой доработки: .review/before-ros-gallery.zip.
++
++Доказательства: .review/ros-gallery-results.json, .review/ros-gallery.cjs, .review/ros-image-provenance.json, .review/ros-carousel-390.png, .review/ros-carousel-1440.png, .review/ros-gallery-mobile.png и .review/lighthouse-ros-gallery-case.report.html.
++
++Публикация не выполнялась.
+diff --git a/index.html b/index.html
+index b1b6891..e601643 100644
+--- a/index.html
++++ b/index.html
+@@ -98,13 +98,13 @@
+ <a class="service-card reveal" data-contact="" href="#contact"><span class="service-index">03 / АВТОМАТИЗАЦИЯ</span><strong>Нужно упростить работу</strong><p>Убрать повторяющиеся действия, обработать файлы или связать процессы.</p><span class="service-link">Обсудить задачу ↗</span></a>
+ </div></div></section>
+ <section class="strip"><div class="shell strip-row"><span class="strip-label">Направления работы</span><div class="strip-types"><span>01 / WEB</span><span>02 / DESKTOP</span><span>03 / AUTOMATION</span><span>04 / INFRASTRUCTURE</span></div></div></section>
+-<section class="section" id="works"><div class="shell work-layout"><div class="work-rail"><p class="kicker">01 / Избранные работы</p><h2 class="section-title">Примеры моих работ</h2><p class="section-copy">Семь проектов — от инструментов для Windows до торговых систем и интерактивных веб-приложений.</p><div class="rail-note">Пять веб-проектов доступны по ссылке «Посмотреть сайт». Здесь показаны реальные скриншоты; иллюстрация Read On Speak отдельно помечена как концепт.</div></div><div class="work-stack">
+-<article class="project-card reveal"><div class="project-visual ros"><div class="ros-window"><div class="window-bar"><span>ROS / LIVE OCR → SPEECH</span><span class="window-dots"><i></i><i></i><i></i></span></div><div class="ocr-focus">«Найденные субтитры превращаются в речь»</div><div aria-hidden="true" class="waves"><i style="--h:14px;--d:0s"></i><i style="--h:31px;--d:.1s"></i><i style="--h:18px;--d:.2s"></i><i style="--h:36px;--d:.3s"></i><i style="--h:23px;--d:.4s"></i><i style="--h:28px;--d:.5s"></i><i style="--h:12px;--d:.6s"></i><i style="--h:34px;--d:.7s"></i><i style="--h:19px;--d:.8s"></i><i style="--h:28px;--d:.9s"></i><i style="--h:15px;--d:1s"></i></div></div><span class="visual-note">01 — КОНЦЕПТ · НЕ СКРИНШОТ</span></div><div class="project-info"><div><p class="project-num">01 / WINDOWS SOFTWARE</p><h3 class="project-name">Read On Speak</h3><p class="project-sub">Распознавание субтитров с экрана и озвучивание в реальном времени.</p><div class="tags"><span class="tag">Python</span><span class="tag">WinSDK OCR</span><span class="tag">TTS</span></div></div><a aria-label="Кратко о проекте Read On Speak" class="open-project" id="project-ros" data-project="ros" href="projects/ros.html">О проекте ↗</a></div></article>
++<section class="section" id="works"><div class="shell work-layout"><div class="work-rail"><p class="kicker">01 / Избранные работы</p><h2 class="section-title">Примеры моих работ</h2><p class="section-copy">Семь проектов — от инструментов для Windows до торговых систем и интерактивных веб-приложений.</p><div class="rail-note">Пять веб-проектов доступны по ссылке «Посмотреть сайт». Здесь показаны реальные скриншоты. В карточке Read On Speak сохранена и отдельно подписана исходная иллюстрация.</div></div><div class="work-stack">
++<article class="project-card reveal"><div class="project-visual ros ros-carousel" role="region" aria-roledescription="карусель" aria-label="Изображения Read On Speak" data-slide="0"><div class="ros-slides"><div class="ros-slide is-active" role="group" aria-roledescription="слайд" aria-label="1 из 2 — иллюстрация проекта" aria-hidden="false"><div class="ros-window"><div class="window-bar"><span>ROS / LIVE OCR → SPEECH</span><span class="window-dots"><i></i><i></i><i></i></span></div><div class="ocr-focus">«Найденные субтитры превращаются в речь»</div><div aria-hidden="true" class="waves"><i style="--h:14px;--d:0s"></i><i style="--h:31px;--d:.1s"></i><i style="--h:18px;--d:.2s"></i><i style="--h:36px;--d:.3s"></i><i style="--h:23px;--d:.4s"></i><i style="--h:28px;--d:.5s"></i><i style="--h:12px;--d:.6s"></i><i style="--h:34px;--d:.7s"></i><i style="--h:19px;--d:.8s"></i><i style="--h:28px;--d:.9s"></i><i style="--h:15px;--d:1s"></i></div></div><span class="visual-note">01 — КОНЦЕПТ · НЕ СКРИНШОТ</span></div><div class="ros-slide" role="group" aria-roledescription="слайд" aria-label="2 из 2 — скриншот программы" aria-hidden="true" inert><img class="ros-slide-image" src="assets/projects/ros-interface.png" alt="Настоящий интерфейс Read On Speak: настройки субтитров и речевого движка" width="1920" height="991" loading="lazy" decoding="async"/><span class="visual-note">02 — СКРИНШОТ ПРОГРАММЫ</span></div></div><div class="ros-carousel-controls" hidden><button type="button" data-carousel-prev aria-label="Предыдущее изображение ROS">←</button><span class="ros-carousel-caption">Иллюстрация проекта · 1 / 2</span><button type="button" data-carousel-next aria-label="Следующее изображение ROS">→</button><button type="button" data-carousel-pause aria-label="Пауза смены изображений ROS">Пауза</button></div><span class="ros-carousel-status visually-hidden" role="status" aria-live="polite"></span></div><div class="project-info"><div><p class="project-num">01 / WINDOWS SOFTWARE</p><h3 class="project-name">Read On Speak</h3><p class="project-sub">Распознавание субтитров с экрана и озвучивание в реальном времени.</p><div class="tags"><span class="tag">Python</span><span class="tag">WinSDK OCR</span><span class="tag">TTS</span></div></div><a aria-label="Подробнее о Read On Speak" class="open-project" id="project-ros" data-project="ros" href="projects/ros.html">Подробнее ↗</a></div></article>
+ <article class="project-card reveal"><div class="project-visual shop has-screenshot"><img class="project-screenshot" src="assets/projects/mama-owner.png" alt="Оригинальный скриншот покупательской витрины Продукты у Валентины" width="1857" height="968" loading="lazy" decoding="async"/></div><div class="project-info"><div><p class="project-num">02 / BUSINESS SYSTEM</p><h3 class="project-name">Продукты у Валентины</h3><p class="project-sub">Онлайн-витрина и локальная система управления магазином. Техническое название — mama-shop.</p><div class="tags"><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">PWA</span></div></div><div class="project-actions"><a aria-label="Кратко о проекте Продукты у Валентины" class="open-project" id="project-mama" data-project="mama" href="projects/mama.html">О проекте ↗</a><span data-live-project="mama"></span></div></div></article>
+ <article class="project-card reveal"><div class="project-visual archive has-screenshot"><img class="project-screenshot" src="assets/projects/archive-sort.jpg" alt="Настоящий стартовый экран Архивариуса с пустыми настройками" width="880" height="780" loading="lazy" decoding="async"/></div><div class="project-info"><div><p class="project-num">03 / DESKTOP AUTOMATION</p><h3 class="project-name">Архивариус</h3><p class="project-sub">Распаковка архивов и умная сортировка файлов с пробным запуском и откатом.</p><div class="tags"><span class="tag">Python</span><span class="tag">CustomTkinter</span><span class="tag">File I/O</span></div></div><a aria-label="Кратко о проекте Архивариус" class="open-project" id="project-archive" data-project="archive" href="projects/archive.html">О проекте ↗</a></div></article>
+ <article class="project-card reveal"><div class="project-visual china has-screenshot"><img class="project-screenshot" src="assets/projects/china-owner.png" alt="Оригинальный скриншот работающего China History" width="1857" height="968" loading="lazy" decoding="async"/></div><div class="project-info"><div><p class="project-num">04 / INTERACTIVE WEBSITE</p><h3 class="project-name">China History</h3><p class="project-sub">Визуальная история цивилизации с интерактивной хронологией, звуком и квизами.</p><div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Canvas</span></div></div><div class="project-actions"><a aria-label="Кратко о проекте Поднебесная — China History" class="open-project" id="project-china" data-project="china" href="projects/china.html">О проекте ↗</a><span data-live-project="china"></span></div></div></article>
+ </div></div></section>
+-<section class="other"><div class="shell"><div class="other-header"><div><p class="kicker">02 / Ещё проекты</p><h2>Другие работы</h2></div><span class="section-aside">05 — 07</span></div><a aria-label="Подробнее о проекте «Склад 14»" class="other-row reveal" id="project-sklad" data-project="sklad" href="projects/sklad.html"><span class="n">05</span><span class="name">Склад 14</span><span class="kind">RETAIL SYSTEM</span><span class="arr">↗</span></a><a aria-label="Подробнее о проекте «Депортация народов в Казахстан»" class="other-row reveal" id="project-deport" data-project="deport" href="projects/deport.html"><span class="n">06</span><span class="name">Депортация народов в Казахстан</span><span class="kind">EDUCATION / WEB</span><span class="arr">↗</span></a><a aria-label="Подробнее о проекте «TAPCARD / NFC»" class="other-row reveal" id="project-nfc" data-project="nfc" href="projects/nfc.html"><span class="n">07</span><span class="name">TAPCARD / NFC</span><span class="kind">LANDING PAGE</span><span class="arr">↗</span></a></div></section>
++<section class="other"><div class="shell"><div class="other-header"><div><p class="kicker">02 / Ещё проекты</p><h2>Другие работы</h2></div><span class="section-aside">05 — 07</span></div><a class="other-row reveal" id="project-sklad" data-project="sklad" href="projects/sklad.html"><span class="n">05</span><span class="name">Склад 14</span><span class="kind">RETAIL SYSTEM</span><span class="arr">↗</span></a><a class="other-row reveal" id="project-deport" data-project="deport" href="projects/deport.html"><span class="n">06</span><span class="name">Депортация народов в Казахстан</span><span class="kind">EDUCATION / WEB</span><span class="arr">↗</span></a><a class="other-row reveal" id="project-nfc" data-project="nfc" href="projects/nfc.html"><span class="n">07</span><span class="name">TAPCARD / NFC</span><span class="kind">LANDING PAGE</span><span class="arr">↗</span></a></div></section>
+ <section class="section about" id="about"><div class="shell about-content"><div class="reveal"><p class="kicker">03 / Подход</p><h2 class="section-title">Меньше сложности.<br/>Больше пользы.</h2><p class="section-copy">Меня интересуют не технологии ради технологий, а работающие решения с понятной логикой и разумной стоимостью поддержки.</p></div><div class="reveal"><p class="about-description">Работаю на стыке <strong>разработки, проектирования и автоматизации</strong>. Собираю интерфейсы, прикладное ПО и системы, которые можно запускать и обслуживать.</p><p class="about-small">В проектах уделяю внимание архитектуре, контролю изменений, совместимости и тестированию. Использую инструменты ИИ-разработки как часть рабочего процесса, проверяя результат и принимая технические решения.</p><div class="stack-categories"><div><h3>Веб</h3><p>HTML, CSS, JavaScript, Flask, PWA</p></div><div><h3>Программы</h3><p>Python, GUI, OCR, TTS, обработка файлов</p></div><div><h3>Данные</h3><p>SQLite, JSON, экспорт и синхронизация</p></div><div><h3>Инфраструктура</h3><p>Ubuntu, Git, SSH, Docker, автоматизация</p></div></div></div></div></section>
+ <section class="contact" id="contact"><div class="shell"><p class="kicker">04 / Контакт</p><div class="contact-wrap"><h2>Нужен сайт или программа?<br/><span>Давай обсудим.</span></h2><a class="contact-link" data-contact="" href="#contact">Выбрать способ связи ↗</a></div><p style="color:var(--sub);max-width:590px;font-size:13px;line-height:1.75;margin:35px 0 90px">Напиши, что хочешь сделать, даже если пока не знаешь технических деталей. Выбери удобный мессенджер — подробности обсудим там.</p><footer class="foot"><span>© 2026 / PORTFOLIO</span><span>DESIGN × ENGINEERING</span><a href="#home">Наверх ↑</a></footer></div></section>
+ </main>
+diff --git a/portfolio.js b/portfolio.js
+index 84a4495..2520396 100644
+--- a/portfolio.js
++++ b/portfolio.js
+@@ -73,4 +73,74 @@
+   }
+   if (saved?.id === 'contact-dialog') PortfolioUI.show(document.getElementById('contact-dialog'), null, null, true);
+   dialog.querySelectorAll('button').forEach(button => button.addEventListener('click', () => PortfolioUI.close(dialog)));
++
++  const rosCarousel = document.querySelector('.ros-carousel');
++  if (rosCarousel) {
++    const slides = [...rosCarousel.querySelectorAll('.ros-slide')];
++    const controls = rosCarousel.querySelector('.ros-carousel-controls');
++    const caption = rosCarousel.querySelector('.ros-carousel-caption');
++    const status = rosCarousel.querySelector('.ros-carousel-status');
++    const pauseButton = rosCarousel.querySelector('[data-carousel-pause]');
++    const labels = ['Иллюстрация проекта', 'Скриншот интерфейса'];
++    let index = 0;
++    let paused = false;
++    let visible = false;
++    let hovering = false;
++    let timer = null;
++    const stop = () => {clearTimeout(timer); timer = null;};
++    const canAdvance = () => !paused && !motion.matches && visible && !hovering &&
++      !rosCarousel.contains(document.activeElement) && !document.hidden &&
++      !document.querySelector('dialog[open]');
++    function schedule() {
++      stop();
++      if (canAdvance()) timer = setTimeout(() => {
++        if (canAdvance()) {select(index + 1, false); schedule();}
++      }, 6000);
++    }
++    function updatePause() {
++      pauseButton.hidden = motion.matches;
++      pauseButton.textContent = paused ? 'Продолжить' : 'Пауза';
++      pauseButton.setAttribute('aria-label', paused ? 'Продолжить смену изображений ROS' : 'Пауза смены изображений ROS');
++    }
++    function select(next, manual = true) {
++      index = (next + slides.length) % slides.length;
++      slides.forEach((slide, i) => {
++        slide.classList.toggle('is-active', i === index);
++        slide.setAttribute('aria-hidden', String(i !== index));
++        slide.inert = i !== index;
++      });
++      caption.textContent = labels[index] + ' · ' + (index + 1) + ' / ' + slides.length;
++      rosCarousel.dataset.slide = String(index);
++      if (manual) {
++        paused = true;
++        status.textContent = labels[index] + ', изображение ' + (index + 1) + ' из ' + slides.length;
++        updatePause();
++        schedule();
++      }
++    }
++    rosCarousel.querySelector('[data-carousel-prev]').addEventListener('click', () => select(index - 1));
++    rosCarousel.querySelector('[data-carousel-next]').addEventListener('click', () => select(index + 1));
++    pauseButton.addEventListener('click', () => {paused = !paused; updatePause(); schedule();});
++    controls.addEventListener('keydown', e => {
++      const next = {ArrowLeft:index - 1, ArrowRight:index + 1, Home:0, End:slides.length - 1}[e.key];
++      if (next !== undefined) {e.preventDefault(); select(next);}
++    });
++    rosCarousel.addEventListener('pointerenter', () => {hovering = true; stop();});
++    rosCarousel.addEventListener('pointerleave', () => {hovering = false; schedule();});
++    rosCarousel.addEventListener('focusin', stop);
++    rosCarousel.addEventListener('focusout', () => requestAnimationFrame(schedule));
++    document.addEventListener('visibilitychange', schedule);
++    motion.addEventListener('change', () => {updatePause(); schedule();});
++    new MutationObserver(schedule).observe(document.body, {attributes:true, attributeFilter:['class']});
++    if ('IntersectionObserver' in window) {
++      new IntersectionObserver(entries => {
++        visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .2;
++        schedule();
++      }, {threshold:[0,.2]}).observe(rosCarousel);
++    } else {visible = true;}
++    controls.hidden = false;
++    select(0, false);
++    updatePause();
++    schedule();
++  }
+ })();
+diff --git a/project-data.js b/project-data.js
+index 95c9de7..08a9cb1 100644
+--- a/project-data.js
++++ b/project-data.js
+@@ -13,7 +13,15 @@ window.PORTFOLIO_PROJECTS = {
+     "note": "В README описаны показатели производительности и сборка приложения; результаты бенчмарков пока не подтверждались независимым запуском.",
+     "details": "projects/ros.html",
+     "liveUrl": "",
+-    "screenshots": [],
++    "screenshots": [
++      {
++        "src": "assets/projects/ros-interface.png",
++        "alt": "Read On Speak: быстрая настройка области субтитров и голоса, программа на паузе",
++        "caption": "Оригинальный скриншот программы от владельца · 02.11.2026",
++        "width": 1920,
++        "height": 991
++      }
++    ],
+     "video": null
+   },
+   "mama": {
+diff --git a/project-media.js b/project-media.js
+index f45fe63..87022c8 100644
+--- a/project-media.js
++++ b/project-media.js
+@@ -29,6 +29,12 @@
+     const p = PORTFOLIO_PROJECTS[key];
+     container.replaceChildren();
+     container.classList.add('media-gallery');
++    if (key === 'ros' && p.screenshots.length) {
++      const title = document.createElement('h3');
++      title.className = 'media-gallery-title';
++      title.textContent = 'Галерея программы';
++      container.append(title);
++    }
+     for (const item of p.screenshots) {
+       const src = asset(item.src);
+       if (!src) continue;
+diff --git a/review.css b/review.css
+index 2123692..89aa55b 100644
+--- a/review.css
++++ b/review.css
+@@ -74,3 +74,23 @@ body{overflow-wrap:break-word}
+ .archive.has-screenshot .project-screenshot{object-fit:contain;padding:12px}.visual-note{padding:4px 7px;border-radius:3px;background:#0c0d0fed;color:#b8c9bd}
+ 
+ .project-quick-live:empty{display:none}.project-quick-live{margin:20px 0}.project-quick-live .project-live{min-height:48px}@media(max-width:760px){.project-quick-live .project-live{width:100%}}
++
++/* ROS keeps its original illustration alongside the owner's real UI capture. */
++.ros-carousel .ros-slides{position:absolute;inset:0 0 64px}
++.ros-slide{position:absolute;inset:0;display:grid;place-items:center;padding-bottom:24px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility .45s}
++.ros-slide.is-active{opacity:1;visibility:visible;pointer-events:auto}
++.ros-slide .visual-note{bottom:4px;left:16px}
++.ros-slide-image{width:100%;height:100%;min-height:0;object-fit:contain;padding:12px 14px 30px}
++.ros-carousel-controls{position:absolute;left:0;right:0;bottom:0;z-index:2;display:grid;grid-template-columns:44px minmax(0,1fr) 44px 82px;align-items:center;gap:6px;min-height:62px;padding:6px 10px;border-top:1px solid #31423b;background:#101715}
++.ros-carousel-controls[hidden]{display:none}
++.ros-carousel-controls button{min-height:44px;padding:5px;border:1px solid #55685d;border-radius:5px;background:#18231d;color:#d9f0e2;font-size:12px}
++.ros-carousel-controls button:hover{background:#273c30}
++.ros-carousel-controls button[hidden]{display:none}
++.ros-carousel-caption{font:10px/1.3 ui-monospace,monospace;color:#c2d7ca;text-align:center}
++.ros-carousel-controls:has([data-carousel-pause][hidden]){grid-template-columns:44px minmax(0,1fr) 44px}
++.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
++.media-gallery-title{font-size:20px;line-height:1.3;margin:0;color:var(--text,#f1f2ef)}
++@media(max-width:760px){.ros-carousel{height:310px;min-height:310px}}
++@media(scripting:none){.ros-carousel .ros-slides{bottom:0}}
++
++@media(prefers-reduced-motion:reduce){.ros-carousel-controls [data-carousel-pause]{display:none}.ros-carousel-controls{grid-template-columns:44px minmax(0,1fr) 44px}}

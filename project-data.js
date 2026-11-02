@@ -13,7 +13,15 @@ window.PORTFOLIO_PROJECTS = {
     "note": "В README описаны показатели производительности и сборка приложения; результаты бенчмарков пока не подтверждались независимым запуском.",
     "details": "projects/ros.html",
     "liveUrl": "",
-    "screenshots": [],
+    "screenshots": [
+      {
+        "src": "assets/projects/ros-interface.png",
+        "alt": "Read On Speak: быстрая настройка области субтитров и голоса, программа на паузе",
+        "caption": "Оригинальный скриншот программы от владельца · 02.11.2026",
+        "width": 1920,
+        "height": 991
+      }
+    ],
     "video": null
   },
   "mama": {

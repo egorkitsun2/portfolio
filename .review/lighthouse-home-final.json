@@ -2,11 +2,11 @@
   {
     "name": "home-mobile",
     "url": "/",
-    "performance": 93,
+    "performance": 100,
     "accessibility": 100,
-    "LCP": 1691.5659999999998,
+    "LCP": 1055.1451541423558,
     "CLS": 0,
-    "TBT": 296.7170000000001,
+    "TBT": 0,
     "failedAccessibility": [],
     "warnings": []
   },
@@ -15,7 +15,7 @@
     "url": "/",
     "performance": 100,
     "accessibility": 100,
-    "LCP": 296.475,
+    "LCP": 280.05099999999993,
     "CLS": 0,
     "TBT": 0,
     "failedAccessibility": [],
@@ -26,9 +26,9 @@
     "url": "/?contact=1",
     "performance": 100,
     "accessibility": 100,
-    "LCP": 1060.884549641738,
+    "LCP": 1052.5372645615103,
     "CLS": 0,
-    "TBT": 34,
+    "TBT": 30,
     "failedAccessibility": [],
     "warnings": []
   }

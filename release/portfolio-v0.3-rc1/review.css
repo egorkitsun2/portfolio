@@ -74,3 +74,23 @@ body{overflow-wrap:break-word}
 .archive.has-screenshot .project-screenshot{object-fit:contain;padding:12px}.visual-note{padding:4px 7px;border-radius:3px;background:#0c0d0fed;color:#b8c9bd}
 
 .project-quick-live:empty{display:none}.project-quick-live{margin:20px 0}.project-quick-live .project-live{min-height:48px}@media(max-width:760px){.project-quick-live .project-live{width:100%}}
+
+/* ROS keeps its original illustration alongside the owner's real UI capture. */
+.ros-carousel .ros-slides{position:absolute;inset:0 0 64px}
+.ros-slide{position:absolute;inset:0;display:grid;place-items:center;padding-bottom:24px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility .45s}
+.ros-slide.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.ros-slide .visual-note{bottom:4px;left:16px}
+.ros-slide-image{width:100%;height:100%;min-height:0;object-fit:contain;padding:12px 14px 30px}
+.ros-carousel-controls{position:absolute;left:0;right:0;bottom:0;z-index:2;display:grid;grid-template-columns:44px minmax(0,1fr) 44px 82px;align-items:center;gap:6px;min-height:62px;padding:6px 10px;border-top:1px solid #31423b;background:#101715}
+.ros-carousel-controls[hidden]{display:none}
+.ros-carousel-controls button{min-height:44px;padding:5px;border:1px solid #55685d;border-radius:5px;background:#18231d;color:#d9f0e2;font-size:12px}
+.ros-carousel-controls button:hover{background:#273c30}
+.ros-carousel-controls button[hidden]{display:none}
+.ros-carousel-caption{font:10px/1.3 ui-monospace,monospace;color:#c2d7ca;text-align:center}
+.ros-carousel-controls:has([data-carousel-pause][hidden]){grid-template-columns:44px minmax(0,1fr) 44px}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.media-gallery-title{font-size:20px;line-height:1.3;margin:0;color:var(--text,#f1f2ef)}
+@media(max-width:760px){.ros-carousel{height:310px;min-height:310px}}
+@media(scripting:none){.ros-carousel .ros-slides{bottom:0}}
+
+@media(prefers-reduced-motion:reduce){.ros-carousel-controls [data-carousel-pause]{display:none}.ros-carousel-controls{grid-template-columns:44px minmax(0,1fr) 44px}}

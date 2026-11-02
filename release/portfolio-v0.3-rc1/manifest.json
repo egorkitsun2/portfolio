@@ -4,13 +4,14 @@
   "assets/projects/deport-owner.png": "9dfb37078498e63c273769c24ac0f6cf3d930875069228112d731be4897c4965",
   "assets/projects/mama-owner.png": "19f9c858c791e263d9b2153fbbb9fab02133168e4ae98767b68d7cf1c402ae5d",
   "assets/projects/nfc-owner.png": "6c3e848c830d48959d31951077e6dd8c07eb3765eb369ef66a9860e3263bba93",
+  "assets/projects/ros-interface.png": "76e946fd44e582e782d312b0cadc0734efdd6515fe9e9878f936c41486a07b27",
   "assets/projects/sklad-owner.png": "776f716694b056bc0da3197a960bfad4c966ea1d7652ec62ba8d6ec4380a6cb2",
   "contact.css": "2b2f5c204a165162252ed96366fe3e4b6b7507647af19c58249a1f2e6ec65b2c",
   "contact.js": "d4dc66618981f3aa709c70d7a6012e239e6a2d93496e2701cd7a11066122f89c",
-  "index.html": "a9c6f481f85e83b028c8f1a8e9bd60ab706c7869c73d14651572406e97477b34",
-  "portfolio.js": "3cfa9cc435f2ff34347e5c2db17357c1865afe97ed85ad450b3a23876d9f06d7",
-  "project-data.js": "9f1b6c90c57732678d3b80cd1b3236815e80b2554cd38cdac1d5dc19af00d2c3",
-  "project-media.js": "84c136f2c750e78228a1e0cdb820b6582fa83788d9ccfccd5cef806f43746f9b",
+  "index.html": "7a0c323f3ad38220597bb0f61b45c31d9b77d896cae0c5d814e846488012ed37",
+  "portfolio.js": "a9245e734d62f30d15e0841d19a4823945d41a76f91b267da167eec7e4151232",
+  "project-data.js": "da8a4ed0952fc7bef958c99c72c73faeca31f6541f49eed6a96bbb370f9c1d56",
+  "project-media.js": "fc9b787953fa4ea1aef804ad6cfbedf2f04d7271190a944292e4a9bbe872a226",
   "projects/archive.html": "5c6b4b5575a5dde08f7562f237d97c40d6148c8d782d03931e11e699e2ae84f1",
   "projects/china.html": "66607a013450499f7fe15a3fa68cb378d4297ac699c0a7dfa4d4dcd12a313774",
   "projects/deport.html": "704976ea37136c8b47201722138c5b4c87a9b420fed1fe13031fc8a9e898125d",
@@ -18,5 +19,5 @@
   "projects/nfc.html": "6cc96eecd3eb5a1e575b2d8b93e713f4d88fc055eb73461a3f5fe6c53bec51c7",
   "projects/ros.html": "c09f0e33f59c0a1415f589db2ab9d988199520b9bdb0fe541269cd720dde61b0",
   "projects/sklad.html": "be5b7b044b2aa1c62b010cc3342c93686ce19cf2c3ccc51fe52a97c491da4ccb",
-  "review.css": "8fe3d7c6c620e34d2f504d904a0b04505910e4c9bc2880879c459e7575bc271a"
+  "review.css": "75d575e8607102a9c79d2148c2291ed125d22d857644e7c7fff7516d0027b180"
 }

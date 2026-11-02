@@ -29,6 +29,12 @@
     const p = PORTFOLIO_PROJECTS[key];
     container.replaceChildren();
     container.classList.add('media-gallery');
+    if (key === 'ros' && p.screenshots.length) {
+      const title = document.createElement('h3');
+      title.className = 'media-gallery-title';
+      title.textContent = 'Галерея программы';
+      container.append(title);
+    }
     for (const item of p.screenshots) {
       const src = asset(item.src);
       if (!src) continue;

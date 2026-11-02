@@ -73,4 +73,74 @@
   }
   if (saved?.id === 'contact-dialog') PortfolioUI.show(document.getElementById('contact-dialog'), null, null, true);
   dialog.querySelectorAll('button').forEach(button => button.addEventListener('click', () => PortfolioUI.close(dialog)));
+
+  const rosCarousel = document.querySelector('.ros-carousel');
+  if (rosCarousel) {
+    const slides = [...rosCarousel.querySelectorAll('.ros-slide')];
+    const controls = rosCarousel.querySelector('.ros-carousel-controls');
+    const caption = rosCarousel.querySelector('.ros-carousel-caption');
+    const status = rosCarousel.querySelector('.ros-carousel-status');
+    const pauseButton = rosCarousel.querySelector('[data-carousel-pause]');
+    const labels = ['Иллюстрация проекта', 'Скриншот интерфейса'];
+    let index = 0;
+    let paused = false;
+    let visible = false;
+    let hovering = false;
+    let timer = null;
+    const stop = () => {clearTimeout(timer); timer = null;};
+    const canAdvance = () => !paused && !motion.matches && visible && !hovering &&
+      !rosCarousel.contains(document.activeElement) && !document.hidden &&
+      !document.querySelector('dialog[open]');
+    function schedule() {
+      stop();
+      if (canAdvance()) timer = setTimeout(() => {
+        if (canAdvance()) {select(index + 1, false); schedule();}
+      }, 6000);
+    }
+    function updatePause() {
+      pauseButton.hidden = motion.matches;
+      pauseButton.textContent = paused ? 'Продолжить' : 'Пауза';
+      pauseButton.setAttribute('aria-label', paused ? 'Продолжить смену изображений ROS' : 'Пауза смены изображений ROS');
+    }
+    function select(next, manual = true) {
+      index = (next + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === index);
+        slide.setAttribute('aria-hidden', String(i !== index));
+        slide.inert = i !== index;
+      });
+      caption.textContent = labels[index] + ' · ' + (index + 1) + ' / ' + slides.length;
+      rosCarousel.dataset.slide = String(index);
+      if (manual) {
+        paused = true;
+        status.textContent = labels[index] + ', изображение ' + (index + 1) + ' из ' + slides.length;
+        updatePause();
+        schedule();
+      }
+    }
+    rosCarousel.querySelector('[data-carousel-prev]').addEventListener('click', () => select(index - 1));
+    rosCarousel.querySelector('[data-carousel-next]').addEventListener('click', () => select(index + 1));
+    pauseButton.addEventListener('click', () => {paused = !paused; updatePause(); schedule();});
+    controls.addEventListener('keydown', e => {
+      const next = {ArrowLeft:index - 1, ArrowRight:index + 1, Home:0, End:slides.length - 1}[e.key];
+      if (next !== undefined) {e.preventDefault(); select(next);}
+    });
+    rosCarousel.addEventListener('pointerenter', () => {hovering = true; stop();});
+    rosCarousel.addEventListener('pointerleave', () => {hovering = false; schedule();});
+    rosCarousel.addEventListener('focusin', stop);
+    rosCarousel.addEventListener('focusout', () => requestAnimationFrame(schedule));
+    document.addEventListener('visibilitychange', schedule);
+    motion.addEventListener('change', () => {updatePause(); schedule();});
+    new MutationObserver(schedule).observe(document.body, {attributes:true, attributeFilter:['class']});
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .2;
+        schedule();
+      }, {threshold:[0,.2]}).observe(rosCarousel);
+    } else {visible = true;}
+    controls.hidden = false;
+    select(0, false);
+    updatePause();
+    schedule();
+  }
 })();
