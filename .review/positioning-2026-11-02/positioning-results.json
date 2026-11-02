@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "name": "Five web projects lead, two desktop projects follow, seven unique triggers",
+      "passed": true
+    },
+    {
+      "name": "Each preview shows the owner contribution and matches the static case",
+      "passed": true
+    },
+    {
+      "name": "Valid robots and sitemap with eight public canonical URLs",
+      "passed": true
+    },
+    {
+      "name": "Unknown root and nested URLs and missing assets return actual 404 for GET and HEAD",
+      "passed": true
+    },
+    {
+      "name": "Metadata and locally packaged 1200x630 screenshot for home and cases",
+      "passed": true
+    },
+    {
+      "name": "404 screen supports keyboard contact and navigation on phone",
+      "passed": true
+    },
+    {
+      "name": "Main and 404 Axe WCAG A/AA checks",
+      "passed": true
+    },
+    {
+      "name": "ROS manual arrows, modal gallery and reduced-motion retained in additional group",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "expected404ConsoleMessages": [
+    {
+      "url": "http://127.0.0.1:8010/missing/deep/path",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "url": "http://127.0.0.1:8010/missing-audit",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/mama",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/china",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/nfc",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/deport",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/sklad",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/ros",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/projects/archive",
+      "status": 200,
+      "head": 200
+    },
+    {
+      "path": "/missing-audit",
+      "status": 404,
+      "head": 404
+    },
+    {
+      "path": "/projects/missing-audit",
+      "status": 404,
+      "head": 404
+    },
+    {
+      "path": "/missing/deep/path",
+      "status": 404,
+      "head": 404
+    },
+    {
+      "path": "/assets/projects/missing.png",
+      "status": 404,
+      "head": 404
+    },
+    {
+      "path": "/projects/",
+      "status": 404,
+      "head": 404
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "head": 404
+    }
+  ]
+}

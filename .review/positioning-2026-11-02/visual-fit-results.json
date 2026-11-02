@@ -1,0 +1,44 @@
+[
+  {
+    "width": 320,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  },
+  {
+    "width": 375,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  },
+  {
+    "width": 390,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  },
+  {
+    "width": 768,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  },
+  {
+    "width": 1024,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  },
+  {
+    "width": 1440,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  },
+  {
+    "width": 1920,
+    "rosIllustrationFits": true,
+    "archiveImageFits": true,
+    "noOverflow": true
+  }
+]

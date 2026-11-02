@@ -1,0 +1,18 @@
+{
+  "htmlPages": 9,
+  "resources": "all referenced scripts, styles and images exist",
+  "duplicateIds": 0,
+  "packagedFiles": 26,
+  "zipEntries": 27,
+  "manifestAndSourceAndZipMatch": true,
+  "originalProjectImagesUnchanged": {
+    "assets/projects/archive-sort.jpg": "ebe5b6fb139e329421c761c60652afdd0dfdda95638b76ec4af670cee351cb5c",
+    "assets/projects/china-owner.png": "81abc4f36962c30715814ef6e0531b8fce1a3220640cf0576cee14c5b0c6b433",
+    "assets/projects/deport-owner.png": "9dfb37078498e63c273769c24ac0f6cf3d930875069228112d731be4897c4965",
+    "assets/projects/mama-owner.png": "19f9c858c791e263d9b2153fbbb9fab02133168e4ae98767b68d7cf1c402ae5d",
+    "assets/projects/nfc-owner.png": "6c3e848c830d48959d31951077e6dd8c07eb3765eb369ef66a9860e3263bba93",
+    "assets/projects/ros-interface.png": "76e946fd44e582e782d312b0cadc0734efdd6515fe9e9878f936c41486a07b27",
+    "assets/projects/sklad-owner.png": "776f716694b056bc0da3197a960bfad4c966ea1d7652ec62ba8d6ec4380a6cb2"
+  },
+  "baseline": "8f490ba92b5e665403fb8d80abccc893d9578962"
+}

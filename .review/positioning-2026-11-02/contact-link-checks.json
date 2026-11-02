@@ -1,0 +1,26 @@
+[
+  {
+    "key": "whatsapp",
+    "url": "https://wa.me/77779409625",
+    "status": 200,
+    "finalUrl": "https://api.whatsapp.com/send/?phone=77779409625&text&type=phone_number&app_absent=0",
+    "title": "Share on WhatsApp",
+    "checkedAt": "2026-11-02T14:21:03.472Z"
+  },
+  {
+    "key": "telegram",
+    "url": "https://t.me/GLhost27",
+    "status": 200,
+    "finalUrl": "https://t.me/GLhost27",
+    "title": "Telegram: Contact @GLhost27",
+    "checkedAt": "2026-11-02T14:21:04.615Z"
+  },
+  {
+    "key": "instagram",
+    "url": "https://www.instagram.com/egorkitsun2/",
+    "status": 200,
+    "finalUrl": "https://www.instagram.com/egorkitsun2/",
+    "title": "Егор Кицун (@egorkitsun2) • Instagram photos and videos",
+    "checkedAt": "2026-11-02T14:21:06.367Z"
+  }
+]

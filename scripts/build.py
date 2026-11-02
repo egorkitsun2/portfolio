@@ -9,7 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "release" / "portfolio-v0.3-rc1"
 ARCHIVE = TARGET.parent / (TARGET.name + ".zip")
 CODE = ["index.html", "contact.css", "contact.js", "review.css",
-        "portfolio.js", "project-data.js", "project-media.js"]
+        "portfolio.js", "project-data.js", "project-media.js",
+        "favicon.svg", "404.html", "robots.txt", "sitemap.xml", "assets/social/portfolio-card.png"]
 data_text = (ROOT / "project-data.js").read_text(encoding="utf-8")
 data = json.loads(data_text[data_text.index("{"):data_text.rindex(";")])
 selected = [Path(name) for name in CODE]

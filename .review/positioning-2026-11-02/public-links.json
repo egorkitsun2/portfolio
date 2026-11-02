@@ -1,0 +1,66 @@
+[
+  {
+    "key": "mama",
+    "url": "https://mama-shop.pages.dev/",
+    "status": 200,
+    "finalUrl": "https://mama-shop.pages.dev/",
+    "title": "Продукты у Валентины — с. Иртышск",
+    "h1": [
+      "\n                  Продукты у Валентины\n                "
+    ],
+    "pageErrors": [],
+    "checkedAt": "2026-11-02T13:50:43.879Z"
+  },
+  {
+    "key": "nfc",
+    "url": "https://onetap-kz.pages.dev/",
+    "status": 200,
+    "finalUrl": "https://onetap-kz.pages.dev/",
+    "title": "Смарт-карточки для сбора отзывов и подписок в одно касание",
+    "h1": [
+      "\n        Смарт-карточки для сбора отзывов и подписок \n        в одно касание\n      "
+    ],
+    "pageErrors": [],
+    "checkedAt": "2026-11-02T13:50:46.245Z"
+  },
+  {
+    "key": "deport",
+    "url": "https://kazakhstan-deportation-archive.pages.dev/",
+    "status": 200,
+    "finalUrl": "https://kazakhstan-deportation-archive.pages.dev/",
+    "title": "Депортация народов в Казахстан",
+    "h1": [
+      "Депортация народов",
+      "Депортация народов в Казахстан в 1930-1950 гг.: Общность истории",
+      "Казахстан сквозь эпохи: депортации, перемены и земля без выбора"
+    ],
+    "pageErrors": [
+      "Cannot read properties of null (reading 'addEventListener')"
+    ],
+    "checkedAt": "2026-11-02T13:50:48.269Z"
+  },
+  {
+    "key": "sklad",
+    "url": "https://mama-shop-reform.pages.dev/",
+    "status": 200,
+    "finalUrl": "https://mama-shop-reform.pages.dev/",
+    "title": "Склад 14 — строительный магазин в Павлодаре",
+    "h1": [
+      "\n                  Склад 14\n                "
+    ],
+    "pageErrors": [],
+    "checkedAt": "2026-11-02T13:50:50.222Z"
+  },
+  {
+    "key": "china",
+    "url": "https://china-history-5c2.pages.dev/",
+    "status": 200,
+    "finalUrl": "https://china-history-5c2.pages.dev/",
+    "title": "Поднебесная: 5000 лет величия | Интерактивная хроника цивилизации",
+    "h1": [
+      "\n          Поднебесная\n          \n            Империи, изменившие мир\n          \n        "
+    ],
+    "pageErrors": [],
+    "checkedAt": "2026-11-02T13:50:52.761Z"
+  }
+]

@@ -68,7 +68,7 @@
       if (video.description) {const text=document.createElement('p');text.className='media-pending';text.textContent=video.description;container.append(text);}
     } else if (['ros','archive'].includes(key)) {
       const pending=document.createElement('p');pending.className='media-pending';
-      pending.textContent='Видеодемонстрация будет доступна после предоставления записи владельцем.';
+      pending.textContent='Видеодемонстрация пока не добавлена.';
       container.append(pending);
     }
   }

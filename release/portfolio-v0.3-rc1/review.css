@@ -94,3 +94,13 @@ body{overflow-wrap:break-word}
 @media(scripting:none){.ros-carousel .ros-slides{bottom:0}}
 
 @media(prefers-reduced-motion:reduce){.ros-carousel-controls [data-carousel-pause]{display:none}.ros-carousel-controls{grid-template-columns:44px minmax(0,1fr) 44px}}
+
+/* Web work leads; desktop projects retain their original media in a compact group. */
+.additional-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:36px}
+.additional-grid .project-info{display:block;padding:24px}
+.additional-grid .project-info>.open-project{margin-top:22px}
+.additional-grid .project-visual{height:350px;min-height:350px}
+.additional-grid .project-visual.has-screenshot{display:block}
+.additional-grid .project-name{font-size:25px}
+.project-quick-role{font-size:14px;line-height:1.8;color:#c6d1c9}
+@media(max-width:1050px){.additional-grid{grid-template-columns:1fr}}

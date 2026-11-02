@@ -83,7 +83,7 @@ const CONTACT_LINKS = {
   dialog.id = 'contact-dialog';
   dialog.className = 'contact-dialog';
   dialog.setAttribute('aria-labelledby','contact-dialog-title');
-  dialog.innerHTML = `<div class="contact-inner"><div class="contact-top"><span>Обсудим твой проект</span><button class="contact-close" type="button" aria-label="Закрыть контакты">×</button></div><h2 id="contact-dialog-title">Где тебе удобнее?</h2><p class="contact-desc">Доступные способы связи.</p><div class="contact-channel-list"></div><p class="contact-help"></p></div>`;
+  dialog.innerHTML = `<div class="contact-inner"><div class="contact-top"><span>Обсудим Ваш проект</span><button class="contact-close" type="button" aria-label="Закрыть контакты">×</button></div><h2 id="contact-dialog-title">Как Вам удобнее связаться?</h2><p class="contact-desc">Доступные способы связи.</p><div class="contact-channel-list"></div><p class="contact-help"></p></div>`;
   document.body.append(dialog);
   register(dialog);
   const list = dialog.querySelector('.contact-channel-list');

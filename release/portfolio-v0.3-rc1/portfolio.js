@@ -49,6 +49,7 @@
     document.getElementById('project-quick-features').replaceChildren(...p.features.map(text => {
       const li = document.createElement('li'); li.textContent = text; return li;
     }));
+    document.getElementById('project-quick-role').textContent = p.role;
     document.getElementById('project-quick-note').textContent = p.note;
     document.getElementById('project-quick-detail').href = p.details;
     PortfolioMedia.render(document.getElementById('project-quick-media'), key);
