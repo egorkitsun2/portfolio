@@ -20,5 +20,16 @@
     "TBT": 0,
     "failedAccessibility": [],
     "warnings": []
+  },
+  {
+    "name": "contact-mobile",
+    "url": "/?contact=1",
+    "performance": 100,
+    "accessibility": 100,
+    "LCP": 1060.884549641738,
+    "CLS": 0,
+    "TBT": 34,
+    "failedAccessibility": [],
+    "warnings": []
   }
 ]
